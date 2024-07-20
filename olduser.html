@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>New User Register</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="bg-primary">
+        <div id="layoutAuthentication">
+            <div id="layoutAuthentication_content">
+                <div class="row g-0">
+                    <div class="col-sm-6 col-md-4 p-3">
+                        <!--1111111111111111111-->
+
+                        <div class="card shadow-lg border-0 rounded-lg mt-5">
+                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Find User</h3></div>
+                            <div class="card-body">
+
+                                <form action="dashboard.html">
+                                    <div class="row mb-3">
+                                        <div class="col-md-12">
+                                            <select class="form-select form-select-lg mb-3" oninput="findusermodul()" aria-label="Large select example" id="findmodel">
+                                                <!-- <option selected>===== selected ==========</option> -->
+                                                <option  value="1">Phone Number</option>
+                                                <option  value="2">Email</option>
+                                            </select> 
+                                        </div>
+                                          
+                                    </div>
+                                </form>
+                                <!--phone number form-->
+                                <form action="" id="findnumber">
+                                    <div class="col-md-12" >
+
+                                        <label for="validationCustom02" class="form-label text-uppercase fs-6 fw-semibold">Pnone number</label>
+                                        <input type="number" class="form-control" id="validationCustom02" name="phonenumber"  required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+
+                                    </div>
+                                    <div class="mt-4 mb-0">
+                                        <button type="submit" onclick="findusermodul()" class="btn btn-primary btn-block">Find</button>
+                                    </div>
+                                </form>
+                                <!--email form-->
+                                <form action="" id="findemail" style="display: none;">
+                                    <div class="col-md-12" >
+
+                                        <label for="validationCustom03" class="form-label text-uppercase fs-6 fw-semibold">Email</label>
+                                        <input type="email" class="form-control" id="validationCustom03" name="useremail" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+
+                                    </div>
+                                    <div class="mt-4 mb-0">
+                                        <button type="submit" onclick="findusermodul()" class="btn btn-primary btn-block">Find</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card-footer text-center py-3">
+                                <a href="userregister.html" class="btn btn-success btn-block" >Add User</a>
+                                <a href="dashboard.html" class="btn btn-danger btn-block" >Back</a>
+                            </div>
+                            <script>
+                                function findusermodul(){
+                                    var findmodel = document.getElementById("findmodel").value;
+                                    if(findmodel == 1){
+                                        document.getElementById("findnumber").style.display = "block";
+                                        document.getElementById("findemail").style.display = "none";
+                                    }
+                                    else if(findmodel == 2){
+                                        document.getElementById("findnumber").style.display = "none";
+                                        document.getElementById("findemail").style.display = "block";
+                                    }
+                                    else{
+                                        document.getElementById("findnumber").style.display = "none";
+                                        document.getElementById("findemail").style.display = "none";
+                                    }
+                                        
+                                }
+                            </script>
+                        </div>
+
+                    </div>
+                    <!--2222222222222222222222222-->
+                    <div class="col-6 col-md-8 p-3">
+                        
+                        <div class="card shadow-lg border-0 rounded-lg mt-5">
+                            <div class="card-header"><h3 class="text-center font-weight-light my-4">User Info </h3></div>
+                            <div class="card-body">
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th>Name</th>
+                                        <th>Phone Number</th>
+                                        <th>Email Address</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>ashok</td>
+                                        <td>8072121367</td>
+                                        <td>a@gmail.com</td>
+                                      </tr> 
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="card-footer text-center py-5">
+                                <div class="small"><a href=""></a></div>
+                            </div>  
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="layoutAuthentication_footer">
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy;</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!--jquri-->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <!--jqurey labery-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
+        <!--other js file-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+
+        <!--jqurey validashon for phone number and email-->
+        <script>
+            /* phone number*/
+            $(document).ready(function(){
+                $("#findnumber").validate({
+                    rules :{
+                        phonenumber : {
+                            required: true,
+                            minlength: 10,
+                            maxlength : 10,
+                        }
+
+                    }
+                })
+            });
+            /* email */
+            $(document).ready(function(){
+                $("#findemail").validate({
+                    rules : {
+                        email :{
+                            required: true,
+                            email: true,
+                        }
+                    }
+                })
+            })
+
+        </script>
+        <!--end jqurey-->
+    </body>
+</html>
