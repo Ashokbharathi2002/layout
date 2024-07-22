@@ -22,14 +22,14 @@
                                     <div class="card-body">
                                         <form action="dashboard.html" id="stafflogin">
                                             <div class="col-md-12 ">
-                                                <label for="validationCustom03" class="form-label text-uppercase fs-6 fw-semibold">Email</label>
+                                                <label for="validationCustom03" class="form-label text-capitalize fs-6 fw-semibold">Email</label>
                                                 <input type="text" class="form-control p-2" id="validationCustom03" name="loginid" required>
                                                 <div class="valid-feedback">
                                                 Looks good!
                                                 </div>
                                             </div>
                                             <div class="col-md-12 ">
-                                                <label for="validationCustom04" class="form-label text-uppercase fs-6 fw-semibold">password</label>
+                                                <label for="validationCustom04" class="form-label text-capitalize fs-6 fw-semibold">password</label>
                                                 <input type="password" class="form-control p-2" id="validationCustom04" name="loginpassword" required>
                                                 <div class="valid-feedback">
                                                 Looks good!
@@ -89,7 +89,18 @@
                             required : true,
                             minlength: 8,
                         },
+                    },
+                    messages:{
+                        loginid : {
+                            required: "Please enter your email",
+                            email: "Please enter a valid email",
+                        },
+                        loginpassword : {
+                            required : "Please enter your password",
+                            minlength: "Your password must be at least 8 characters long",
+                        },
                     }
+
                 })
             });
         </script>

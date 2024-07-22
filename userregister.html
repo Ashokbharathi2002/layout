@@ -21,21 +21,22 @@
                             <div class="row mb-3">
                                 <div class="col-md-12">
                                     <label for="newusername" class="form-label text-capitalize fs-6 fw-semibold">full name</label>
-                                    <input type="text" class="form-control p-1" id="newusername" name="fullname" required>
+                                    <input type="text" class="form-control p-1" id="newusername" name="fullname" >
+                                    <label for="newusername-error" style="color: red;" class="error"></label>
                                     <div class="valide-feedback">
                                         
                                     </div>
                                 </div>
                                 <div class="col-md-12 ">
                                     <label for="newuserphone" class="form-label text-capitalize fs-6 fw-semibold">Pnone number</label>
-                                    <input type="number" class="form-control p-1" id="newuserphone" name="nuphoenumber"  required>
+                                    <input type="number" class="form-control p-1" id="newuserphone" name="nuphoenumber"  >
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
                                 </div>
                                 <div class="col-md-12 ">
                                     <label for="newuseremail" class="form-label text-capitalize fs-6 fw-semibold">Email</label>
-                                    <input type="email" class="form-control p-1" id="newuseremail" name="useremail" required>
+                                    <input type="email" class="form-control p-1" id="newuseremail" name="useremail" >
                                     <div class="valid-feedback">
                                     Looks good!
                                     </div>
@@ -43,7 +44,7 @@
                           
                                 <div class="col-md-12 ">
                                     <label for="newusergender" class="form-label text-capitalize fs-6 fw-semibold">Gender</label>
-                                    <select class="form-select p-1" id="newusergender" name="Gender" required>
+                                    <select class="form-select p-1" id="newusergender" name="Gender" >
                                         <option selected disabled value="">Choose...</option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
@@ -56,7 +57,7 @@
                                 
                             </div>
                             <div class="mt-4 mb-0">
-                                <button type="button" onclick="showuserdata()" class="btn btn-primary btn-block">submit</button>
+                                <button type="submit" class="btn btn-primary btn-block">submit</button>
                             </div>
                         </form><br>
                         <div class="card-footer  text-center py-3">
@@ -66,6 +67,9 @@
                     </div>
                 </div>
                 <!--script for dispaly webcam -->
+                <script>
+                    document.getElementById("newusername-error.error").style.color="red";
+                </script>
 
                 <!--gred layout-->
 
@@ -110,23 +114,6 @@
                         <!--js for the data-->
                         <script>
                             
-                            var username = document.getElementById("newusername").valu;
-                            var usernumbee = document.getElementById("newuserphone").valu;
-                            var useremail = document.getElementById("newuseremail").valu;
-                            var usergender = document.getElementById("newusergender").valu;
-
-                            function showuserdata() {
-                                document.getElementById("username").innerHTML = username;
-                                document.getElementById("usernumbee").innerHTML = usernumbee;
-                                document.getElementById("useremail").innerHTML = useremail;
-                                document.getElementById("usergender").innerHTML = usergender;
-
-                                document.getElementById("cardform").style.display="none"
-                                document.getElementById("otheroff").style.display="block"
-
-
-                            }
-
                         </script>
                       </div>
                       <!--2-->
@@ -226,6 +213,7 @@
         <!--jquri-->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <!--jqurey labery-->
+      
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
         <!--link js file in html-->
 
@@ -256,10 +244,57 @@
                         Gender: {
                             required: true,
                         }
-                    }
+                    },
+
+                    messages : {
+                        fullname: {
+                            required: "Please enter your name",
+                            minlength: "Your name must be at least 5 characters long",
+                            maxlength: "Your name must be at most 20 characters long",
+                        },
+                        nuphoenumber: {
+                            required: "Please enter your phone number",
+                            maxlength: "Your phone number must be at most 10 characters long",
+                            minlength: "Your phone number must be at least 10 characters long",
+                        },
+                        useremail: {
+                            required: "Please enter your email",
+                            email: "Please enter a valid email address",
+                        },
+                        Gender: {
+                            required: "Please select your gender",
+                        }
+                    },
+                    
                 }
                 );
             })
+
+            /* submit the form */
+            $("#userregister").submit(function(event) {
+                event.preventDefault();
+                var form = $(this);
+                var url = form.attr('#');
+                $.ajax({
+                    type: "get",
+                    url: url,
+                    data: form.serialize(),
+                    success: function(data) {
+                        if(data == "success"){
+                            alert("Registration Successful");
+                            $("#cardform").hide();
+                            $("#otheroff").show();
+                            
+                        }
+                        else{
+                            alert("Registration Failed");
+                        }
+                    }
+                });
+            });
+        
+
+
         </script>
     </body>
 </html>

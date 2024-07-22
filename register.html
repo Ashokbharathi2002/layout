@@ -23,7 +23,7 @@
                                         <form id="Register">
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
-                                                    <label for="validationCustom01" class="form-label text-uppercase fs-6 fw-semibold">First name</label>
+                                                    <label for="validationCustom01" class="form-label text-capitalize fs-6 fw-semibold">full name</label>
                                                     <input type="text" class="form-control" id="validationCustom01" name="fullname" required>
                                                     <div class="valide-feedback">
                                                        
@@ -31,28 +31,28 @@
 
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label for="validationCustom02" class="form-label text-uppercase fs-6 fw-semibold">Pnone number</label>
+                                                    <label for="validationCustom02" class="form-label text-capitalize fs-6 fw-semibold">Pnone number</label>
                                                     <input type="number" class="form-control" id="validationCustom02" name="phoneno" required>
                                                     <div class="valid-feedback">
                                                         Looks good!
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12 p-3">
-                                                    <label for="validationCustom03" class="form-label text-uppercase fs-6 fw-semibold">Email</label>
+                                                    <label for="validationCustom03" class="form-label text-capitalize fs-6 fw-semibold">Email</label>
                                                     <input type="email" class="form-control" id="validationCustom03" name="useremail" required>
                                                     <div class="valid-feedback">
                                                         Looks good!
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <label for="validationCustom04" class="form-label text-uppercase fs-6 fw-semibold">designation</label>
+                                                    <label for="validationCustom04" class="form-label text-capitalize fs-6 fw-semibold">designation</label>
                                                     <input type="text" class="form-control" id="validationCustom04" name="designation" required>
                                                     <div class="valid-feedback">
                                                         Looks good!
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12 p-3">
-                                                    <label for="validationCustom05" class="form-label text-uppercase fs-6 fw-semibold">Gender</label>
+                                                    <label for="validationCustom05" class="form-label text-capitalize fs-6 fw-semibold">Gender</label>
                                                     <select class="form-select" id="validationCustom05" name="Gender" required>
                                                         <option selected disabled value="">Choose...</option>
                                                         <option value="Male">Male</option>
@@ -133,6 +133,28 @@
                             required : true,
                         },
 
+                    },
+                    messages:{
+                        fullname : {
+                            required: "Please enter your name",
+                            minlength: "Your name must be at least 5 characters long",
+                            maxlength: "Your name must be at most 26 characters long",
+                        },
+                        phoneno : {
+                            required: "Please enter your phone number",
+                            minlength: "Your phone number must be at least 10 characters long",
+                            maxlength: "Your phone number must be at most 10 characters long",
+                        },
+                        email : {
+                            required: "Please enter your email",
+                            email: "Please enter a valid email address",
+                        },
+                        designation : {
+                            required: "Please enter your designation",
+                        },
+                        Gender : {
+                            required: "Please select your gender",
+                        },
                     }
                 })
             });
