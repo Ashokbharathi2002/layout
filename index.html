@@ -17,6 +17,28 @@
 
     </head>
     <body>
+        <!--loadding start up-->
+        <center>
+            <div class="spinner"></div>
+        </center>
+        <!-- lodaing style -->
+         <style>
+            .spinner {
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                background: #474bff;
+                -webkit-mask: radial-gradient(circle closest-side at 50% 40%,#0000 94%, #000);
+                transform-origin: 50% 40%;
+                animation: spinner-pl92zb 1.2s infinite linear;
+            }
+
+            @keyframes spinner-pl92zb {
+                100% {
+                    transform: rotate(1turn);
+                }
+            }
+         </style>
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light fixed-top">
             <div class="container">
@@ -78,9 +100,9 @@
         <!-- Image Showcases-->
         <section class="showcase">
             <div class="container-fluid p-0">
-                <div class="row g-0">
-                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-1.jpg')"></div>
-                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                <div class="row g-0 " >
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img demo-container jos" id="fistimgitems" style="background-image: url('assets/img/bg-showcase-1.jpg')"></div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text demo-container jos"  data-jos_animation="fade-right" >
                         <h2>Fully Responsive Design</h2>
                         <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
                     </div>
@@ -190,14 +212,24 @@
                 </div>
             </div>
         </footer>
+        <!--jqurey cdn-->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <!--jqurey in animashon libery-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animateplus/2.1.1/animateplus.min.js" integrity="sha512-8OBycMlplJwe43/UTp/j2IWV3DugTYmaEZMJKS5S1HZpMOV8qbdZKygL0sWd/YEJOAM2BXxYbxmDAPXNCPce6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animateplus/2.1.1/animateplus.js" integrity="sha512-E8BH0z4vVNsdBOJFGQnLa2uTRG2bPE9D/GYDI6/nwduULGudaA1DPeoSe2DcdwexiG///6EOFPD/m8aLGIDxfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+        <script src="/dist/jos.min.js"></script>
+        <!-- Or From a CDN -->
+        <script src="https://unpkg.com/jos-animation@0.9.0-beta"></script>
+        <script>JOS.init();</script>
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+
     </body>
 </html>

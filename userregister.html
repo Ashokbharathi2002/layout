@@ -21,22 +21,21 @@
                             <div class="row mb-3">
                                 <div class="col-md-12">
                                     <label for="newusername" class="form-label text-capitalize fs-6 fw-semibold">full name</label>
-                                    <input type="text" class="form-control p-1" id="newusername" name="fullname" >
-                                    <label for="newusername-error" style="color: red;" class="error"></label>
+                                    <input type="text" class="form-control p-1" id="newusername" name="fullname" required >
                                     <div class="valide-feedback">
                                         
                                     </div>
                                 </div>
                                 <div class="col-md-12 ">
                                     <label for="newuserphone" class="form-label text-capitalize fs-6 fw-semibold">Pnone number</label>
-                                    <input type="number" class="form-control p-1" id="newuserphone" name="nuphoenumber"  >
+                                    <input type="number" class="form-control p-1" id="newuserphone" name="nuphoenumber" required >
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
                                 </div>
                                 <div class="col-md-12 ">
                                     <label for="newuseremail" class="form-label text-capitalize fs-6 fw-semibold">Email</label>
-                                    <input type="email" class="form-control p-1" id="newuseremail" name="useremail" >
+                                    <input type="email" class="form-control p-1" id="newuseremail" name="useremail" required>
                                     <div class="valid-feedback">
                                     Looks good!
                                     </div>
@@ -44,7 +43,7 @@
                           
                                 <div class="col-md-12 ">
                                     <label for="newusergender" class="form-label text-capitalize fs-6 fw-semibold">Gender</label>
-                                    <select class="form-select p-1" id="newusergender" name="Gender" >
+                                    <select class="form-select p-1" id="newusergender" name="Gender" required >
                                         <option selected disabled value="">Choose...</option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
@@ -57,7 +56,7 @@
                                 
                             </div>
                             <div class="mt-4 mb-0">
-                                <button type="submit" class="btn btn-primary btn-block">submit</button>
+                                <button type="button" onclick="showcase()" class="btn btn-primary btn-block">submit</button>
                             </div>
                         </form><br>
                         <div class="card-footer  text-center py-3">
@@ -67,9 +66,6 @@
                     </div>
                 </div>
                 <!--script for dispaly webcam -->
-                <script>
-                    document.getElementById("newusername-error.error").style.color="red";
-                </script>
 
                 <!--gred layout-->
 
@@ -87,25 +83,25 @@
                                         <div class="p-3"><p>Name</p></div>
                                       </div>
                                       <div class="col-6">
-                                        <div class="p-3"><p id="username">ashon</p></div>
+                                        <div class="p-3"><p id="username"></p></div>
                                       </div>
                                       <div class="col-6">
                                         <div class="p-3"><p>Phone Number</p></div>
                                       </div>
                                       <div class="col-6">
-                                        <div class="p-3"><p id="usernumbee">1234567890</p></div>
+                                        <div class="p-3"><p id="usernumbee"></p></div>
                                       </div>
                                       <div class="col-6">
                                         <div class="p-3"><p >Email</p></div>
                                       </div>
                                       <div class="col-6">
-                                        <div class="p-3"><p id="useremail" >a@gmail.com</p></div>
+                                        <div class="p-3"><p id="useremail" ></p></div>
                                       </div>
                                       <div class="col-6">
                                         <div class="p-3"><p>Gender</p></div>
                                       </div>
                                       <div class="col-6">
-                                        <div class="p-3"><p id="usergender">Male</p></div>
+                                        <div class="p-3"><p id="usergender"></p></div>
                                       </div>
                                     </div>
                                   </div>
@@ -154,7 +150,7 @@
                                     </div> 
                                 
                                     <script> 
-                                        
+                                        /* cam script */
                                         var stop = function () { 
                                             var stream = video.srcObject; 
                                             var tracks = stream.getTracks(); 
@@ -181,6 +177,7 @@
                                         $(function () { 
                                             start(); 
                                         }); 
+
                                     </script>
 
                                 </div>
@@ -193,8 +190,23 @@
                 </div>
 
                <!--end layout-->
-                
             </div>
+            <script>
+                function showcase(){
+                    var name = document.getElementById("newusername").value;
+                    var email = document.getElementById("newuseremail").value;
+                    var phone = document.getElementById("newuserphone").value;
+                    var gendet = document.getElementById("newusergender").value;
+                    
+                    document.getElementById("otheroff").style.display="Block";
+                    document.getElementById("cardform").style.display="none";
+
+                    var Customersname = document.getElementById("username").innerHTML=name;
+                    var Customersemail = document.getElementById("useremail").innerHTML=email;
+                    var Customerstel = document.getElementById("userphone").innerHTML=phone;
+                    var Customerstel = document.getElementById("usergender").innerHTML=gendet;
+                }
+            </script>
             <div id="layoutAuthentication_footer">
                 <footer class="p-2 bg-light mt-auto">
                     <div class="container-fluid px-4">
@@ -266,11 +278,11 @@
                         }
                     },
                     
-                }
-                );
+                });
+                
             })
 
-            /* submit the form */
+            /* submit the form 
             $("#userregister").submit(function(event) {
                 event.preventDefault();
                 var form = $(this);
@@ -283,8 +295,7 @@
                         if(data == "success"){
                             alert("Registration Successful");
                             $("#cardform").hide();
-                            $("#otheroff").show();
-                            
+                            $("#otheroff").show()
                         }
                         else{
                             alert("Registration Failed");
@@ -293,7 +304,7 @@
                 });
             });
         
-
+            */
 
         </script>
     </body>

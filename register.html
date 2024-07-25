@@ -20,40 +20,39 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
                                     <div class="card-body">
-                                        <form id="Register">
+                                        <form id="Register" >
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <label for="validationCustom01" class="form-label text-capitalize fs-6 fw-semibold">full name</label>
-                                                    <input type="text" class="form-control" id="validationCustom01" name="fullname" required>
+                                                    <input type="text" class="form-control" id="validationCustom01" name="fullname" >
                                                     <div class="valide-feedback">
                                                        
                                                     </div>
-
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label for="validationCustom02" class="form-label text-capitalize fs-6 fw-semibold">Pnone number</label>
-                                                    <input type="number" class="form-control" id="validationCustom02" name="phoneno" required>
+                                                    <input type="number" class="form-control" id="validationCustom02" name="phoneno" >
                                                     <div class="valid-feedback">
                                                         Looks good!
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12 p-3">
                                                     <label for="validationCustom03" class="form-label text-capitalize fs-6 fw-semibold">Email</label>
-                                                    <input type="email" class="form-control" id="validationCustom03" name="useremail" required>
+                                                    <input type="email" class="form-control" id="validationCustom03" name="useremail" >
                                                     <div class="valid-feedback">
                                                         Looks good!
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <label for="validationCustom04" class="form-label text-capitalize fs-6 fw-semibold">designation</label>
-                                                    <input type="text" class="form-control" id="validationCustom04" name="designation" required>
+                                                    <input type="text" class="form-control" id="validationCustom04" name="designation" >
                                                     <div class="valid-feedback">
                                                         Looks good!
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12 p-3">
                                                     <label for="validationCustom05" class="form-label text-capitalize fs-6 fw-semibold">Gender</label>
-                                                    <select class="form-select" id="validationCustom05" name="Gender" required>
+                                                    <select class="form-select" id="validationCustom05" name="Gender" >
                                                         <option selected disabled value="">Choose...</option>
                                                         <option value="Male">Male</option>
                                                         <option value="Female">Female</option>
@@ -65,7 +64,7 @@
 
                                             </div>
                                             <div class="mt-4 mb-0">
-                                                <button type="submit"class="btn btn-primary btn-block">Register</button>
+                                                <button type="submit" onsubmit="register()" class="btn btn-primary btn-block">Register</button>
                                             </div>
                                         </form>
                                     </div>
@@ -82,6 +81,13 @@
                     </div>
                 </main>
             </div>
+            <script>
+                function register(){
+                    var name=document.getElementById("validationCustom01").value;
+                    alert("Hi " + name + " registration was successful. wait for admin Authentication")
+                    window.open("index.html")
+                }
+            </script>
 
             <div id="layoutAuthentication_footer">
                 <footer class="p-2 bg-light mt-auto">
