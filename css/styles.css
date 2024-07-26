@@ -8146,21 +8146,7 @@ textarea.form-control-lg {
   /*
   background-image: url(/assets/img/bg-masthead.jpg) ;
   */
-  background:
-      radial-gradient(50% 50% at 100% 0,#c5896b 0%  5% ,#b85ec1 6%  15%,#c5896b 16% 25%,#b85ec1 26% 35%,#c5896b 36% 45%,
-       #b85ec1 46% 55%,#c5896b 56% 65%,#b85ec1 66% 75%,#c5896b 76% 85%,#b85ec1 86% 95%,
-       #0000 96%),
-      radial-gradient(50% 50% at 0 100%,#c5896b 0%  5% ,#b85ec1 6%  15%,#c5896b 16% 25%,#b85ec1 26% 35%,#c5896b 36% 45%,
-       #b85ec1 46% 55%,#c5896b 56% 65%,#b85ec1 66% 75%,#c5896b 76% 85%,#b85ec1 86% 95%,
-       #0000 96%),
-      radial-gradient(50% 50%,#c5896b 0%  5% ,#b85ec1 6%  15%,#c5896b 16% 25%,#b85ec1 26% 35%,#c5896b 36% 45%,
-       #b85ec1 46% 55%,#c5896b 56% 65%,#b85ec1 66% 75%,#c5896b 76% 85%,#b85ec1 86% 95%,
-       #0000 96%),
-      radial-gradient(50% 50%,#c5896b 0%  5% ,#b85ec1 6%  15%,#c5896b 16% 25%,#b85ec1 26% 35%,#c5896b 36% 45%,
-       #b85ec1 46% 55%,#c5896b 56% 65%,#b85ec1 66% 75%,#c5896b 76% 85%,#b85ec1 86% 95%,
-       #0000 96%) 10px 10px;
-  background-size: 20px 20px;
-  background-color: #c5896b;
+  
   
 }
 
