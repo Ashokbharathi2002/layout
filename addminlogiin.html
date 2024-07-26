@@ -20,7 +20,7 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4"> Staff Login</h3></div>
                                     <div class="card-body">
-                                        <form action="dashboard.html" id="stafflogin">
+                                        <form  id="stafflogin">
                                             <div class="col-md-12 ">
                                                 <label for="validationCustom03" class="form-label text-capitalize fs-6 fw-semibold">Email</label>
                                                 <input type="text" class="form-control p-2" id="validationCustom03" name="loginid" required>
@@ -37,7 +37,8 @@
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 <a href="register.html" class="btn btn-success">Register</a>
-                                                <button type="submit" class="btn btn-primary">Login</button>
+
+                                                <button type="button" onclick="login()" class="btn btn-primary">Login</button>
                                             </div>
                                         </form>
                                     </div>
@@ -53,8 +54,24 @@
                     
                 </main>
             </div>
+            <!--login-->
+            <script>
+                function login(){
+                    var userid = document.getElementById("validationCustom03").value;
+                    var userpass = document.getElementById("validationCustom04").value;
+
+                    if( userid == "admin@mail.com"){
+
+                        window.location.href = "dashboard.html";
+                    }
+                    else{
+                        alert("Invalid Credentials");
+                    }
+                }
+            </script>
+
             <div id="layoutAuthentication_footer">
-                <footer class="p-2 bg-light mt-auto">
+                <footer class="p-3 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy;</div>

@@ -40,7 +40,7 @@
                                     <div class="col-md-12" >
 
                                         <label for="validationCustom02" class="form-label text-uppercase fs-6 fw-semibold">Pnone number</label>
-                                        <input type="number" class="form-control" id="validationCustom02" name="phonenumber"  required>
+                                        <input type="text" class="form-control" id="validationCustom02" name="phonenumber"  required>
                                         <div class="valid-feedback">
                                             Looks good!
                                         </div>
@@ -53,7 +53,6 @@
                                 <!--email form-->
                                 <form action="" id="findemail" style="display: none;">
                                     <div class="col-md-12" >
-
                                         <label for="validationCustom03" class="form-label text-uppercase fs-6 fw-semibold">Email</label>
                                         <input type="email" class="form-control" id="validationCustom03" name="useremail" required>
                                         <div class="valid-feedback">
@@ -94,7 +93,7 @@
                       <div class="col-sm-8">
                         <!--table contend-->
                         <div class="card shadow-lg border-0 rounded-lg mt-5">
-                            <div class="card-header"><h3 class="text-center font-weight-light my-4">User Info </h3></div>
+                            <div class="card-header"><h3 class="text-center font-weight-light my-4">User Info </h3></div><div class="progress w-100"></div>
                             <div class="card-body">
                                 <table class="table">
                                     <thead>
@@ -125,7 +124,7 @@
             </div>
 
             <div id="layoutAuthentication_footer">
-                <footer class="p-2 bg-light mt-auto">
+                <footer class="p-3 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy;</div>
@@ -157,6 +156,8 @@
                             required: true,
                             minlength: 10,
                             maxlength : 10,
+                            number: true,
+                            digits: true,
                         }
 
                     }
@@ -176,5 +177,32 @@
 
         </script>
         <!--end jqurey-->
+        <!--find user loading -->
+        <style>
+            .progress {
+               height: 4.5px;
+               width: 145.6px;
+               background: linear-gradient(#474bff 0 0),
+                   linear-gradient(#474bff 0 0),
+                   #dbdcef;
+               background-size: 60% 100%;
+               background-repeat: no-repeat;
+               animation: progress-7x9cg2 3s infinite;
+            }
+            
+            @keyframes progress-7x9cg2 {
+               0% {
+                  background-position: -150% 0,-150% 0;
+               }
+            
+               66% {
+                  background-position: 250% 0,-150% 0;
+               }
+            
+               100% {
+                  background-position: 250% 0, 250% 0;
+               }
+            }
+        </style>
     </body>
 </html>

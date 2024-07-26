@@ -17,7 +17,7 @@
                 <div class="card shadow-lg border-0 rounded-lg mt-5 mx-auto" id="cardform" style="min-width: 250px; width: 50%;">
                     <div class="card-header p-0"><h3 class="text-center font-weight-light my-4">User Info</h3></div>
                     <div class="card-body">
-                        <form id="userregister"  >
+                        <form id="userregister" method="post" action="https://sheetdb.io/api/v1/izly4xp8knx2v" >
                             <div class="row mb-3">
                                 <div class="col-md-12">
                                     <label for="newusername" class="form-label text-capitalize fs-6 fw-semibold">full name</label>
@@ -78,6 +78,7 @@
                             <div class="card-body">
                                 <!--info-->
                                 <div class="container text-center">
+                                    <h3 style="display: none; color: red; text-transform: uppercase;" id="unknower">**unknower user**</h3>
                                     <div class="row g-2">
                                       <div class="col-6">
                                         <div class="p-3"><p>Name</p></div>
@@ -104,13 +105,12 @@
                                         <div class="p-3"><p id="usergender"></p></div>
                                       </div>
                                     </div>
-                                  </div>
+                                </div>
+                                <div class="card-footer  text-center py-3">
+                                    <a href="dashboard.html" class="btn btn-danger btn-block px-2" >Back</a>
+                                </div>
                             </div>
                         </div>
-                        <!--js for the data-->
-                        <script>
-                            
-                        </script>
                       </div>
                       <!--2-->
                       <div class="col-sm-8">
@@ -152,6 +152,7 @@
                                     <script> 
                                         /* cam script */
                                         var stop = function () { 
+                                            var name = document.getElementById("newusername").value;
                                             var stream = video.srcObject; 
                                             var tracks = stream.getTracks(); 
                                             for (var i = 0; i < tracks.length; i++) { 
@@ -159,7 +160,7 @@
                                                 track.stop(); 
                                             } 
                                             video.srcObject = null; 
-                                            alert("scussfully")
+                                            alert( name +" was register scussfully")
                                             window.location.href="dashboard.html"
                                         } 
                                         var start = function () { 
@@ -203,12 +204,17 @@
 
                     var Customersname = document.getElementById("username").innerHTML=name;
                     var Customersemail = document.getElementById("useremail").innerHTML=email;
-                    var Customerstel = document.getElementById("userphone").innerHTML=phone;
+                    var Customerstel = document.getElementById("usernumbee").innerHTML=phone;
                     var Customerstel = document.getElementById("usergender").innerHTML=gendet;
+
+                    if(name == false & phone==false & email==false & gendet==false){
+                        document.getElementById("unknower").style.display="block"
+                    }
+
                 }
             </script>
             <div id="layoutAuthentication_footer">
-                <footer class="p-2 bg-light mt-auto">
+                <footer class="p-3 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy;</div>
@@ -225,12 +231,9 @@
         <!--jquri-->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <!--jqurey labery-->
-      
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
         <!--link js file in html-->
-
-        <!-- other js file
-         -->
+        <!-- other js file -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
         <script>
@@ -241,6 +244,7 @@
                             required: true,
                             minlength: 5,
                             maxlength: 20,
+                            number:false,
 
                         },
                         nuphoenumber: {
@@ -282,11 +286,11 @@
                 
             })
 
-            /* submit the form 
+            /* submit the form */
             $("#userregister").submit(function(event) {
                 event.preventDefault();
                 var form = $(this);
-                var url = form.attr('#');
+                var url = form.attr('https://sheetdb.io/api/v1/izly4xp8knx2v');
                 $.ajax({
                     type: "get",
                     url: url,
@@ -304,8 +308,6 @@
                 });
             });
         
-            */
-
         </script>
     </body>
 </html>
