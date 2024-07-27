@@ -8146,7 +8146,7 @@ textarea.form-control-lg {
   /*
   background-image: url(/assets/img/bg-masthead.jpg) ;
   */
-  background-color:whitesmoke;
+  background: rgb(215, 221, 255);
   
 }
 
@@ -11248,4 +11248,12 @@ body {
 /*erroe masage*/
 .error{
   color: red;
+  font-style: italic;
+  font-weight: 600;
+}
+.dashboardtext{
+  color: black;
+}
+.dashboardtext:hover{
+  color: white;
 }

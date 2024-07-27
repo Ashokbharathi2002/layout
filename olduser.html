@@ -160,6 +160,15 @@
                             digits: true,
                         }
 
+                    },
+                    messages:{
+                        phonenumber:{
+                            required: "Please enter your phone number",
+                            minlength: "Your phone number must be at least 10 characters long",
+                            maxlength: "Your phone number must be at most 10 characters long",
+                            number: "Please enter a valid phone number",
+                            digits: "Please enter a valid phone number",
+                        }
                     }
                 })
             });
@@ -170,6 +179,12 @@
                         email :{
                             required: true,
                             email: true,
+                        }
+                    },
+                    messages:{
+                        email:{
+                            required: "Please enter your email",
+                            email: "Please enter a valid email address",
                         }
                     }
                 })

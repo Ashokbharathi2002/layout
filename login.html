@@ -88,10 +88,29 @@
                     var loginpassword = document.getElementById('validationCustom04').value;
 
                     if(loginid == "staff@mail.com" & loginpassword == "staff2024" ){
-                        window.location.href = 'dashboard.html';
+
+                        alertbox.render({
+                            alertIcon: 'success',
+                            title: 'Thank You!',
+                            message: 'login successful',
+                            btnTitle: 'Ok',
+                            border:true
+                        });
+                        setTimeout(() => {
+                            window.location.href = 'dashboard.html';
+                        }, 3000);
+                       
                     }
                     else{
-                        alert('Invalid Login');
+
+                        alertbox.render({
+                            alertIcon: 'error',
+                            title: 'Thank You!',
+                            message: 'Invalid Login',
+                            btnTitle: 'Ok',
+                            border:true
+                        });
+
                     }
                 }
             </script>
@@ -116,6 +135,9 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <!--jqurey labery-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
+
+        <!-- cdn file for aleart-->
+        <script src="https://cdn.jsdelivr.net/gh/noumanqamar450/alertbox@main/version/1.0.2/alertbox.min.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>

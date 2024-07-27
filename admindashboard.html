@@ -6,13 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Compeny Dashboard</title>
+        <title>Compeny Admin Dashboard</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
-    <body class="sb-nav-fixed bg-primary" >
-        <nav class="sb-topnav navbar navbar-expand navbar-dark "   style="background-color: rgb(134, 151, 195);" >
+    <body class="sb-nav-fixed bg-primary " >
+        <nav class="sb-topnav navbar navbar-expand navbar-dark " style="background-color: rgb(134, 151, 195);" >
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-0 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><h5 class="m-auto" style="color: black;" ><i class="fas fa-bars" ></i></h5></button>
 
@@ -25,13 +25,13 @@
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion"  style="background-color: rgb(134, 151, 195);" id="sidenavAccordion">
+                <nav class="sb-sidenav accordion" style="background-color: rgb(134, 151, 195);" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             
                             <a class="nav-link" href="dashboard.html">
                                 <div class="sb-nav-link-icon"><h5 class="dashboardtext"><i class="fas fa-tachometer-alt"></i></h5></div>
-                                <h5 class="dashboardtext" >Dashboard</h5> 
+                                <h5 class="dashboardtext">Admin Dashboard</h5> 
                             </a>
                             <!--
                             <div class="sb-sidenav-menu-heading">Interface</div>
@@ -76,7 +76,7 @@
                             </a>
                             <a class="nav-link" href="tables.html">
                                 <div class="sb-nav-link-icon"> <h5 class="dashboardtext"><i class="fas fa-table"></i></h5> </div>
-                                <h5 class="dashboardtext">Tables</h5>
+                                <h5 class="dashboardtext">Report</h5>
                             </a>
                             <a class="nav-link" href="index.html">
                                 <div class="sb-nav-link-icon"> <h5 class="dashboardtext"><i class="fas fa-user fa-fw"></i></h5> </div>
@@ -95,15 +95,16 @@
             <div id="layoutSidenav_content">
                 <main style="border-radius: 30px;">
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Dashboard</h1>
+                        <h1 class="mt-4"> Admin Dashboard</h1>
                         <div class="row">
                             <div class="col-xl-3 col-md-4 py-3 px-3 w-100">
-                                <a href="#" class="btn btn-outline-primary">New user</a>
-                                <a href="#" class="btn btn-outline-primary">Existing User</a>
+                                <a href="userregister.html" class="btn btn-outline-primary"> Add New Staff</a>
+                                <a href="olduser.html" class="btn btn-outline-primary ">Existing Staff</a>
                             </div>
                         <div class="card mb-4 bg-light">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
+                                Staff Details
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">

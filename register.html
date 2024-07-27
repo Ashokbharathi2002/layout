@@ -20,7 +20,7 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
                                     <div class="card-body">
-                                        <form id="Register" action="index.html" >
+                                        <form id="Register"  >
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <label for="validationCustom01" class="form-label text-capitalize fs-6 fw-semibold">full name</label>
@@ -38,7 +38,7 @@
                                                 </div>
                                                 <div class="col-md-12 p-3">
                                                     <label for="validationCustom03" class="form-label text-capitalize fs-6 fw-semibold">Email</label>
-                                                    <input type="email" class="form-control" id="validationCustom03" name="useremail" >
+                                                    <input type="email" class="form-control" id="validationCustom03" name="useremail" required >
                                                     <div class="valid-feedback">
                                                         Looks good!
                                                     </div>
@@ -87,12 +87,30 @@
                     var gender = document.getElementById("validationCustom05").value;
     
                     if(gender == false){
-                        alert("Please enter your details");
+
+                        alertbox.render({
+                            alertIcon: 'warning',
+                            title: 'Thank You!',
+                            message: 'Please enter your details',
+                            btnTitle: 'Ok',
+                            border:true
+                        });
+
                     }
                     else{
-                        alert("Hi " + name + " registration was successful. wait for admin Authentication")
-                    }
-  
+
+                        alertbox.render({
+                            alertIcon: 'success',
+                            title: 'Thank You!',
+                            message: 'AlertBox Popup Message',
+                            btnTitle: 'Ok',
+                            themeColor: '#000000',
+                            btnColor: '#7CFC00',
+                            btnColor: true
+                        });
+                        window.location.href="index.html"
+                        
+                    }  
                 }
             </script>
 
@@ -119,6 +137,9 @@
         <!--other js file-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
+
+        <!-- cdn file for aleart-->
+        <script src="https://cdn.jsdelivr.net/gh/noumanqamar450/alertbox@main/version/1.0.2/alertbox.min.js"></script>
 
         <!--jqurey code for validashon-->
         <script>
