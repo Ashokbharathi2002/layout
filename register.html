@@ -20,7 +20,7 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
                                     <div class="card-body">
-                                        <form id="Register"  >
+                                        <form id="Register"  action="index.html"  >
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <label for="validationCustom01" class="form-label text-capitalize fs-6 fw-semibold">full name</label>
@@ -108,7 +108,10 @@
                             btnColor: '#7CFC00',
                             btnColor: true
                         });
-                        window.location.href="index.html"
+
+                        setTimeout(() => {
+                            window.location.href = 'index.html';
+                        }, 3000);
                         
                     }  
                 }
