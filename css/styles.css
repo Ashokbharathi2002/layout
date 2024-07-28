@@ -8143,11 +8143,14 @@ textarea.form-control-lg {
 
 .bg-primary {
   --bs-bg-opacity: 1;
+
+  background-image: url(/assets/img/bg1.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: var(--bs-gray-100);
   /*
-  background-image: url(/assets/img/bg-masthead.jpg) ;
+  /background: rgb(215, 221, 255);
   */
-  background: rgb(215, 221, 255);
-  
 }
 
 .bg-secondary {
@@ -11251,9 +11254,12 @@ body {
   font-style: italic;
   font-weight: 600;
 }
+.error::after{
+  content: "!";
+}
+.error::before{
+  content: "Error: ";
+}
 .dashboardtext{
   color: black;
-}
-.dashboardtext:hover{
-  color: white;
 }
