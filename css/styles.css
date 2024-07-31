@@ -8143,14 +8143,14 @@ textarea.form-control-lg {
 
 .bg-primary {
   --bs-bg-opacity: 1;
+  background-color: blue;
 
-  background-image: url(/assets/img/bg1.jpg);
+  /* background-image: url(/assets/img/bg1.jpg);
   background-size: cover;
   background-position: center;
   z-index: var(--bs-gray-100);
-  /*
-  /background: rgb(215, 221, 255);
-  */
+  background: rgb(215, 221, 255); */
+
 }
 
 .bg-secondary {
@@ -11262,4 +11262,21 @@ body {
 }
 .dashboardtext{
   color: black;
+}
+.spassword{
+  border: solid ;
+  border-style: double;
+  text-align: center;
+  height: auto;
+  padding: 10px;
+  margin: auto;
+  border-radius: 5px;
+}
+
+/* boody bg */
+.fullbg{
+  background-image: url(/assets/img/bg1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }

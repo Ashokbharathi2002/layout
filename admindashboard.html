@@ -11,7 +11,7 @@
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
-    <body class="sb-nav-fixed bg-primary " >
+    <body class="fullbg sb-nav-fixed " >
         <nav class="sb-topnav navbar navbar-expand navbar-dark " style="background-color: #eee8f6;" >
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-0 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><h5 class="m-auto" style="color: black;" ><i class="fas fa-bars" ></i></h5></button>
@@ -24,57 +24,20 @@
             <!-- Navbar-->
         </nav>
         <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion" style="filter: blur(5); /* background-image: url(/assets/img/bg1.jpg);*/ background: transparent; background-size: cover; background-position: center; " id="sidenavAccordion">
+            <div id="layoutSidenav_nav" style=" background-image: url(/assets/img/bg1.jpg); background-size: cover; background-position: center; background-attachment: fixed;">
+                <nav class="sb-sidenav accordion"  id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             
-                            <a class="nav-link" href="dashboard.html">
+                            <a class="nav-link" href="admindashboard.html">
                                 <div class="sb-nav-link-icon"><h6 class="dashboardtext"><i class="fas fa-tachometer-alt"></i></h6></div>
                                 <h6 class="dashboardtext">Admin Dashboard</h6> 
                             </a>
-                            <!--
-                            <div class="sb-sidenav-menu-heading">Interface</div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                management
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            -->
-                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        Account Info
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="#">#</a>
-                                            <a class="nav-link" href="#">#</a>
-                                            <a class="nav-link" href="#">#</a>
-                                        </nav>
-                                    </div>
-                                    <!--
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        Error
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="401.html">401 Page</a>
-                                            <a class="nav-link" href="404.html">404 Page</a>
-                                            <a class="nav-link" href="500.html">500 Page</a>
-                                        </nav>
-                                    </div>
-                                    -->
-                                </nav>
-                            </div>
-
-                            <a class="nav-link" href="charts.html">
+                            <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"> <h6 class="dashboardtext"><i class="fas fa-chart-area"></i></h6></div>
                                 <h6 class="dashboardtext" >Charts</h6> 
                             </a>
-                            <a class="nav-link" href="tables.html">
+                            <a class="nav-link" href="report.html">
                                 <div class="sb-nav-link-icon"> <h6 class="dashboardtext"><i class="fas fa-table"></i></h6> </div>
                                 <h6 class="dashboardtext">Report</h6>
                             </a>
@@ -98,7 +61,7 @@
                         <h1 class="mt-4"> Admin Dashboard</h1>
                         <div class="row">
                             <div class="col-xl-3 col-md-4 py-3 px-3 w-100">
-                                <a href="#" class="btn btn-outline-primary"> Add New Staff</a>
+                                <a href="addstaff.html" class="btn btn-outline-primary"> Add New Staff</a>
                                 <a href="#" class="btn btn-outline-primary ">Existing Staff</a>
                             </div>
                         <div class="card mb-4 ">
