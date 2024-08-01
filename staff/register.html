@@ -136,66 +136,15 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <!--jqurey labery-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
+        <!-- validashon file -->
+        <script src="/js/Validation.js"></script>
 
         <!--other js file-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
+        <script src="/js/scripts.js"></script>
 
         <!-- cdn file for aleart-->
         <script src="https://cdn.jsdelivr.net/gh/noumanqamar450/alertbox@main/version/1.0.2/alertbox.min.js"></script>
 
-        <!--jqurey code for validashon-->
-        <script>
-            $(document).ready(function(){
-                $("#Register").validate({
-                    rules:{
-                        fullname : {
-                            required: true,
-                            minlength: 5,
-                            maxlength: 26,
-                        },
-                        phoneno : {
-                            required: true,
-                            minlength: 10,
-                            maxlength : 10,
-                        },
-                        useremail : {
-                            required: true,
-                            email: true,
-                        },
-                        designation : {
-                            required : true,
-                        },
-                        Gender : {
-                            required : true,
-                        },
-
-                    },
-                    messages:{
-                        fullname : {
-                            required: "Please enter your name",
-                            minlength: "Your name must be at least 5 characters long",
-                            maxlength: "Your name must be at most 26 characters long",
-                        },
-                        phoneno : {
-                            required: "Please enter your phone number",
-                            minlength: "Your phone number must be at least 10 characters long",
-                            maxlength: "Your phone number must be at most 10 characters long",
-                        },
-                        useremail : {
-                            required: "Please enter your email",
-                            email: "Please enter a valid email address",
-                        },
-                        designation : {
-                            required: "Please enter your designation",
-                        },
-                        Gender : {
-                            required: "Please select your gender",
-                        },
-                    }
-                })
-            });
-
-        </script>
     </body>
 </html>

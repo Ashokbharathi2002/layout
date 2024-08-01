@@ -142,56 +142,13 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <!--jqurey labery-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
+        <!-- validashon file -->
+        <script src="/js/Validation.js"></script>
+
         <!--other js file-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="/js/scripts.js"></script>
 
-        <!--jqurey validashon for phone number and email-->
-        <script>
-            /* phone number*/
-            $(document).ready(function(){
-                $("#findnumber").validate({
-                    rules :{
-                        phonenumber : {
-                            required: true,
-                            minlength: 10,
-                            maxlength : 10,
-                            number: true,
-                            digits: true,
-                        }
-
-                    },
-                    messages:{
-                        phonenumber:{
-                            required: "Please enter your phone number",
-                            minlength: "Your phone number must be at least 10 characters long",
-                            maxlength: "Your phone number must be at most 10 characters long",
-                            number: "Please enter a valid phone number",
-                            digits: "Please enter a valid phone number",
-                        }
-                    }
-                })
-            });
-            /* email */
-            $(document).ready(function(){
-                $("#findemail").validate({
-                    rules : {
-                        email :{
-                            required: true,
-                            email: true,
-                        }
-                    },
-                    messages:{
-                        email:{
-                            required: "Please enter your email",
-                            email: "Please enter a valid email address",
-                        }
-                    }
-                })
-            })
-
-        </script>
-        <!--end jqurey-->
         <!--find user loading -->
         <style>
             .progress {
