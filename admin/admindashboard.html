@@ -6,9 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Compeny Admin Dashboard</title>
+        <title> Admin Dashboard</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-        <link href="css/styles.css" rel="stylesheet" />
+
+        <link href="/css/styles.css" rel="stylesheet" />
+
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body class="fullbg sb-nav-fixed " >
@@ -17,7 +19,7 @@
             <button class="btn btn-link btn-sm order-0 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><h5 class="m-auto" style="color: black;" ><i class="fas fa-bars" ></i></h5></button>
 
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html"> <h5 class="dashboardtext" > Compeny Name</h5></a>
+            <a class="navbar-brand ps-3" href="/index.html"> <h5 class="dashboardtext" > Compeny Name</h5></a>
             
             <!-- Navbar Search-->
            
@@ -29,7 +31,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             
-                            <a class="nav-link" href="admindashboard.html">
+                            <a class="nav-link" href="/admin/admindashboard.html">
                                 <div class="sb-nav-link-icon"><h6 class="dashboardtext"><i class="fas fa-tachometer-alt"></i></h6></div>
                                 <h6 class="dashboardtext">Admin Dashboard</h6> 
                             </a>
@@ -37,11 +39,11 @@
                                 <div class="sb-nav-link-icon"> <h6 class="dashboardtext"><i class="fas fa-chart-area"></i></h6></div>
                                 <h6 class="dashboardtext" >Charts</h6> 
                             </a>
-                            <a class="nav-link" href="report.html">
+                            <a class="nav-link" href="/admin/report.html">
                                 <div class="sb-nav-link-icon"> <h6 class="dashboardtext"><i class="fas fa-table"></i></h6> </div>
                                 <h6 class="dashboardtext">Report</h6>
                             </a>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="/index.html">
                                 <div class="sb-nav-link-icon"> <h6 class="dashboardtext"><i class="fas fa-user fa-fw"></i></h6> </div>
                                 <h6 class="dashboardtext">Logout</h6>
                             </a>
@@ -70,7 +72,7 @@
                                 Staff Details
                             </div>
                             <div class="card-body">
-                                <table id="datatablesSimple">
+                                <table id="datatablesSimple" class="table table-bordered text-center">
                                     <thead>
                                         <tr>
                                             <th>Name</th>
