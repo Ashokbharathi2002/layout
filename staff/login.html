@@ -20,7 +20,7 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4"> Staff Login</h3></div>
                                     <div class="card-body">
-                                        <form action="dashboard.html" class="needs-validation" id="stafflogin">
+                                        <form  class="needs-validation" id="stafflogin">
                                             <div class="col-md-12 ">
                                                 <label for="validationCustom03" class="form-label text-capitalize fs-6 fw-semibold">Email</label>
                                                 <input type="text" class="form-control p-2" id="validationCustom03" name="staffusername" required>
@@ -52,23 +52,41 @@
                         </div>
                     </div>
                     <script>
-                        /* login system
+                        /* login system */
                         $(document).ready(function(){
                             $('#stafflogin').submit(function(e){
                                 e.preventDefault();
                                 var loginid = $('#validationCustom03').val();
                                 var loginpassword = $('#validationCustom04').val();
                                 $.ajax({
-                                    url: 'stafflogin.php',
+                                    url: '#',
                                     type: 'POST',
                                     data: {loginid:loginid,loginpassword:loginpassword},
                                     success: function(data){
                                         if(data == 'success'){
-                                            window.location.href = 'dashboard.php';
+                                            
+                                            alertbox.render({
+                                                alertIcon: 'success',
+                                                title: 'Thank You!',
+                                                message: 'login successful',
+                                                btnTitle: 'Ok',
+                                                border:true,
+                                            });
+                                            
+                                            setTimeout(() => {
+                                                window.location.href = '/staff/dashboard.html';
+                                            }, 2000);
 
                                         }
                                         else{
-                                            alert('Invalid Login');
+                                           
+                                            alertbox.render({
+                                                alertIcon: 'error',
+                                                title: 'Thank You!',
+                                                message: 'Invalid Login',
+                                                btnTitle: 'Ok',
+                                                border:true
+                                            });
                                         }
 
                                     }
@@ -76,7 +94,7 @@
                             })
 
                         });
-                        */
+                     
                     </script>
                     
                 </main>
