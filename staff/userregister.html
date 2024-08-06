@@ -56,7 +56,7 @@
                                 
                             </div>
                             <div class="mt-4 mb-0">
-                                <button type="button" onclick="showcase()" class="btn btn-primary btn-block">submit</button>
+                                <button type="submit" onclick="" class="btn btn-primary btn-block">submit</button>
                             </div>
                         </form><br>
                         <div class="card-footer  text-center py-3">
@@ -255,27 +255,65 @@
         <script src="https://cdn.jsdelivr.net/gh/noumanqamar450/alertbox@main/version/1.0.2/alertbox.min.js"></script>
 
         <script>
+            let host = "http://127.0.0.1:8000/"
+            let appName = "visual/"
+
+            // /* submit the form */
+            // $("#userregister").submit(function(event) {
+            //     event.preventDefault();
+            //     const response = fetch(host+appName+'register/customer/', {
+            //                     method: 'POST',
+            //                     headers: {
+            //                         'Content-Type': 'application/json'
+            //                     },
+            //                     body: JSON.stringify({
+            //                         "name":"gopi",
+            //                         "phone":"9536546558",
+            //                         "email":"",
+            //                         "gender":""
+            //                     })
+            //                 });
+            // console.log(response())
+            
+            // });
+            // const response = await fetch(host+appName+'register/customer/', {
+            //                     method: 'POST',
+            //                     headers: {
+            //                         'Content-Type': 'application/json'
+            //                     },
+            //                     body: JSON.stringify({
+            //                         "name":"gopi",
+            //                         "phone":"9536546558",
+            //                         "email":"",
+            //                         "gender":""
+            //                     })
+            //                 });
+
+            // console.log(response())
+
+
             /* submit the form */
-            $("#userregister").submit(function(event) {
-                event.preventDefault();
-                var form = $(this);
-                var url = form.attr('https://sheetdb.io/api/v1/izly4xp8knx2v');
-                $.ajax({
-                    type: "post",
-                    url: url,
-                    data: form.serialize(),
-                    success: function(data) {
-                        if(data == "success"){
-                            alert("Registration Successful");
-                            $("#cardform").hide();
-                            $("#otheroff").show()
-                        }
-                        else{
-                            alert("Registration Failed");
-                        }
-                    }
-                });
-            });
+            // $("#userregister").submit(function(event) {
+            //     event.preventDefault();
+            //     var form = $(this);
+            //     var url = form.attr(host+appName+'/register/customer/');
+            //     $.ajax({
+            //         type: "post",
+            //         url: url,
+            //         data: form.serialize(),
+            //         success: function(data) {
+            //             if(data == "success"){
+            //                 alert("Registration Successful");
+            //                 $("#cardform").hide();
+            //                 $("#otheroff").show()
+            //             }
+            //             else{
+            //                 alert("Registration Failed");
+            //             }
+            //         }
+            //     });
+            // });
+
         
         </script>
     </body>

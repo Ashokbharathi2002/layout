@@ -67,19 +67,19 @@
                                                         <input type="text" class="form-control" id="staffpassword" name="staffpass" required >
                                                         <button class="btn btn-outline-secondary" type="button" onclick="generatePass()" id="button-addon2">genarate</button>
                                                     </div>
-
                                                 </div>
                                                 
                                             </div>
-                                            <div class="mt-4 mb-0">
-                                                <button type="submit" onclick="register()" class="btn btn-primary btn-block">Register</button>
+                                            <div class="mt-4 mb-0 text-center justify-content-center">
+                                                <button type="submit" onclick="register()" class="btn btn-primary btn-block w-50"> Register 🧑‍💻 </button>
                                             </div>
                                         </form>
                                     </div>
                                     
                                     <div class="card-footer text-center py-3">
-                                        <div class="small">
-                                            <a href="/admin/admindashboard.html" class="btn btn-danger btn-success" >Back To Home</a>
+                                        <div class="small grid gap-3">
+                                            <a href="/admin/admindashboard.html" class="btn btn-danger btn-success p-2 g-col-6" >Back To Home 🏠</a> 
+                                            <a href="" class="btn btn-success p-2 g-col-6" >Find Staff 🕵️‍♀️</a>
                                         </div>
                                     </div>
                                 </div>
@@ -90,38 +90,21 @@
             </div>
             <!--generat-->
             <script>
-                
                 /* Function to generate combination of password */
                 function generatePass() {
                     let pass = '';
-                    let str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
-                        'abcdefghijklmnopqrstuvwxyz0123456789@#$';
+                    let str = '0123456789';
 
-                    for (let i = 1; i <= 10; i++) {
+                    for (let i = 1; i <= 5; i++) {
                         let char = Math.floor(Math.random()
                             * str.length + 1);
 
                         pass += str.charAt(char)
                     }
-
                     // return pass;
                     console.log(pass)
                     document.getElementById("staffpassword").value=pass;
                 }
-               
-            </script>
-            <!--form validashon-->
-            <script>
-
-                function register(){
-                    
-                }
-            </script>
-
-            <!--genarate a userid and password-->
-            <!--js code for genarate a password-->
-            <script>
-
             </script>
 
             <br><br>

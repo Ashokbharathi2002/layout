@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Call Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #response {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="registerButton">Register</button>
+  <div id="response"></div>
+
+  <script>
+    let host = "http://127.0.0.1:8000/"
+    let appName = "visual/"
+    document.getElementById('registerButton').addEventListener('click', async () => {
+      const userData = {
+        "name":"gopi",
+        "phone":"9586569553",
+        "email":"",
+        "gender":"male"
+      };
+
+      try {
+        const response = await fetch(host+appName+'register/customer/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(userData)
+        });
+        console.log("Response : "+response)
+        // const data = await response.json();
+        // console.log("ResponseData: "+data);
+        if (response.status === 201) {
+          const data = await response.json();
+          console.log('User registered successfully:', data);
+          document.getElementById('response').innerText = 'User registered successfully: ' + JSON.stringify(data, null, 2);
+          document.getElementById('response').style.display = 'block';
+        } else {
+        //   throw new Error('Failed to register user: ' + response.statusText);
+        const data = await response.json();
+          console.log('User registered successfully:', data);
+          document.getElementById('response').innerText = 'User registered successfully: ' + JSON.stringify(data, null, 2);
+          document.getElementById('response').style.display = 'block';
+        }
+      } catch (error) {
+        console.error('There was a problem with the registration request:', error);
+        document.getElementById('response').innerText = 'Error: ' + error.message;
+        document.getElementById('response').style.display = 'block';
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -8,7 +8,7 @@ $(document).ready(function(){
             },
             staffpassword:{
                 required:true,
-                minlength:8
+                minlength:4
             }
         },
         messages:{
@@ -48,6 +48,14 @@ $(document).ready(function(){
             Gender : {
                 required : true,
             },
+            password : {
+                required : true,
+                minlength : 4,
+            },
+            conformpassword : {
+                required : true,
+                equalTo : "#staffpassword",
+            }
 
         },
         messages:{
@@ -71,6 +79,14 @@ $(document).ready(function(){
             Gender : {
                 required: "Please select your gender",
             },
+            password : {
+                required: "Please enter your password",
+                minlength : "Your password must be at least 4 characters long",
+            },
+            conformpassword : {
+                required: "Please enter your confirm password",
+                equalTo : "Please enter the same password as above",
+            }
         }
     })
 });
