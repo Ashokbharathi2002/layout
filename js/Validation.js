@@ -96,7 +96,7 @@ $(document).ready(function(){
     $("#userregister").validate({
         rules: {
             fullname: {
-                required: true,
+                required: false,
                 minlength: 5,
                 maxlength: 20,
                 number:false,
@@ -113,7 +113,7 @@ $(document).ready(function(){
 
             },
             Gender: {
-                required: true,
+                required: false,
             }
         },
         messages : {

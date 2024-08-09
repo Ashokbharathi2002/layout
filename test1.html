@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Compeny Dashboard</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="/css/styles.css" rel="stylesheet"/>
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="fullbg sb-nav-fixed "  >
+        <nav class="sb-topnav navbar navbar-expand navbar-dark "  style="background-color: #eee8f6;" >
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-0 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><h5 class="m-auto" style="color: black;" ><i class="fas fa-bars" ></i></h5></button>
+
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="/index.html"> <h5 class="dashboardtext" > Compeny Name</h5></a>
+            
+            <!-- Navbar Search-->
+           
+            <!-- Navbar-->
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav" style=" background-image: url(/assets/img/bg1.jpg); background-size: cover; background-position: center; background-attachment: fixed; ">
+                <nav class="sb-sidenav accordion"   id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            
+                            <a class="nav-link" href="/staff/dashboard.html">
+                                <div class="sb-nav-link-icon"><h6 class="dashboardtext"><i class="fas fa-tachometer-alt"></i></h6></div>
+                                <h6 class="dashboardtext" >Dashboard</h6> 
+                            </a>
+                            
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                </nav>
+                            </div>
+
+                            <a class="nav-link" href="/staff/charts.html">
+                                <div class="sb-nav-link-icon"> <h6 class="dashboardtext"><i class="fas fa-chart-area"></i></h6></div>
+                                <h6 class="dashboardtext" >Charts</h6> 
+                            </a>
+                            <a class="nav-link" href="/staff/tables.html">
+                                <div class="sb-nav-link-icon"> <h6 class="dashboardtext"><i class="fas fa-table"></i></h6> </div>
+                                <h6 class="dashboardtext">Tables</h6>
+                            </a>
+                            <a class="nav-link" onclick="staffLogout(event)" >
+                                <div class="sb-nav-link-icon"> <h6 class="dashboardtext"><i class="fas fa-user fa-fw"></i></h6> </div>
+                                <h6 class="dashboardtext">Logout</h6>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main style="border-radius: 30px;">
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Dashboard</h1>
+                        <div class="row">
+                            <div class="col-xl-3 col-md-4 py-3 px-3 w-100">
+                                <a href="/staff/userregister.html" class="btn btn-outline-primary">New user</a>
+                                <a href="/staff/olduser.html" class="btn btn-outline-primary">Existing User</a>
+                            </div>
+                        <div class="card mb-4 ">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple" class="table table-bordered" >
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Phone Number</th>
+                                            <th>Email Address</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Phone Number</th>
+                                            <th>Email Address</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>a@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>ab@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>abc@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>a@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>ab@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>abc@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>a@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>ab@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>abc@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>a@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>ab@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>abc@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>a@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>ab@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>abc@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>a@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>ab@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>abc@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>a@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>ab@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>abc@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>a@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>ab@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>abc@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>a@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>ab@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>abc@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>a@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>ab@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E.ashok</td>
+                                            <td>8072121367</td>
+                                            <td>abc@gmail.com</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> 
+                        </div>
+                    </div>
+                </main>
+                <footer class="p-3 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy;</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="/js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="/assets/demo/chart-area-demo.js"></script>
+        <script src="/assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="/js/datatables-simple-demo.js"></script>
+        <!--api-->
+        <script src="/js/apiscript.js"></script>
+        <!-- cdn file for aleart-->
+        <script src="https://cdn.jsdelivr.net/gh/noumanqamar450/alertbox@main/version/1.0.2/alertbox.min.js"></script>
+    </body>
+</html>

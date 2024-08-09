@@ -33,40 +33,9 @@
                                 <div class="sb-nav-link-icon"><h6 class="dashboardtext"><i class="fas fa-tachometer-alt"></i></h6></div>
                                 <h6 class="dashboardtext" >Dashboard</h6> 
                             </a>
-                            <!--
-                            <div class="sb-sidenav-menu-heading">Interface</div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                management
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            -->
+                            
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <!-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        Account Info
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="#">#</a>
-                                            <a class="nav-link" href="#">#</a>
-                                            <a class="nav-link" href="#">#</a>
-                                        </nav>
-                                    </div> -->
-                                    <!--
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        Error
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="401.html">401 Page</a>
-                                            <a class="nav-link" href="404.html">404 Page</a>
-                                            <a class="nav-link" href="500.html">500 Page</a>
-                                        </nav>
-                                    </div>
-                                    -->
                                 </nav>
                             </div>
 
@@ -78,207 +47,232 @@
                                 <div class="sb-nav-link-icon"> <h6 class="dashboardtext"><i class="fas fa-table"></i></h6> </div>
                                 <h6 class="dashboardtext">Tables</h6>
                             </a>
+                            <a class="nav-link" href="/staff/canara.html">
+                                <div class="sb-nav-link-icon"> <h6 class="dashboardtext"><i class="fas fa-table"></i></h6> </div>
+                                <h6 class="dashboardtext">filem</h6>
+                            </a>
                             <a class="nav-link" onclick="staffLogout(event)" >
                                 <div class="sb-nav-link-icon"> <h6 class="dashboardtext"><i class="fas fa-user fa-fw"></i></h6> </div>
                                 <h6 class="dashboardtext">Logout</h6>
                             </a>
                         </div>
                     </div>
-                    <!--
-                    <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Start Bootstrap
-                    </div>
-                    -->
+                    
                 </nav>
             </div>
             <div id="layoutSidenav_content">
                 <main style="border-radius: 30px;">
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Dashboard</h1>
-                        <div class="row">
-                            <div class="col-xl-3 col-md-4 py-3 px-3 w-100">
-                                <a href="/staff/userregister.html" class="btn btn-outline-primary">New user</a>
-                                <a href="/staff/olduser.html" class="btn btn-outline-primary">Existing User</a>
+                        <h1 class="mt-4">Dashboard</h1><br><br>
+                        <div class="container px-4">
+                            <div class="row gx-5">
+                                <!--register-->
+                                <div class="col">
+                                    <div class="p-3 shadow p-3 mb-5 bg-body-tertiary rounded" id="newuserregister">
+                                        <div class="card-header p-0 "><h3 class="text-center font-weight-light my-4">Customer Register</h3></div>
+                                        <div class="card-body">
+                                            <form id="userregister" onsubmit="customerRegister(event)"  >
+                                                <div class="row mb-3">
+                                                    <div class="col-md-12">
+                                                        <label for="newusername" class="form-label text-capitalize fs-6 fw-semibold">full name</label>
+                                                        <input type="text" class="form-control p-1" id="newusername" name="fullname"  >
+                                                        <div class="valide-feedback">
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 ">
+                                                        <label for="newuserphone" class="form-label text-capitalize fs-6 fw-semibold">Pnone number</label>
+                                                        <input type="number" class="form-control p-1" id="newuserphone" name="nuphoenumber"  >
+                                                        <div class="valid-feedback">
+                                                            Looks good!
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 ">
+                                                        <label for="newuseremail" class="form-label text-capitalize fs-6 fw-semibold">Email</label>
+                                                        <input type="email" class="form-control p-1" id="newuseremail" name="useremail" >
+                                                        <div class="valid-feedback">
+                                                        Looks good!
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 ">
+                                                        <label for="newusergender" class="form-label text-capitalize fs-6 fw-semibold">Gender</label>
+                                                        <select class="form-select p-1" id="newusergender" name="Gender" >
+                                                            <option selected disabled value="">Choose...</option>
+                                                            <option value="Male">Male</option>
+                                                            <option value="Female">Female</option>
+                                                        </select>
+                                                        <div class="invalid-feedback">
+                                                            looks good
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                                <div class="mt-4 mb-0">
+                                                    <button type="submit" onclick="" class="btn btn-primary btn-block w-100">submit</button>
+                                                </div>
+                                            </form><br>
+                                            <!-- <div class="card-footer  text-center py-3">
+                                                <a href="/staff/olduser.html" class="btn btn-success btn-block px-2" >Find User</a>
+                                                <a href="/staff/userregister.html" class="btn btn-danger btn-block px-2" >Back</a>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                    <!--show the user data-->
+                                    <div class="card shadow-lg border-0 rounded-lg mt-5" id="Newcustomregisterr" style="display: none;">
+                                        <div class="card-header p-0"><h3 class="text-center font-weight-light my-4">Custom Info</h3></div>
+                                        <div class="card-body">
+                                            <!--info-->
+                                            <div class="container text-center">
+                                                <h3 style="display: none; color: red; text-transform: uppercase;" id="unknower">**unknower user**</h3>
+                                                <div class="row g-2">
+                                                    <div class="col-6">
+                                                        <div class="p-0"><p>Name</p></div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="p-0"><p id="username"></p></div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="p-0"><p>Phone Number</p></div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="p-0"><p id="usernumbee"></p></div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="p-0"><p >Email</p></div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="p-0"><p id="useremail" ></p></div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="p-0"><p>Gender</p></div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="p-0"><p id="usergender"></p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer  text-center py-3">
+                                                <a href="/staff/dashboard.html" class="btn btn-danger btn-block px-2" >Back</a>
+                                                <a href="/staff/canara.html" class="btn btn-success btn-block px-2" >conform</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--find user-->
+                                <div class="col">
+                                    <div class="p-3">
+                                        <div class="card shadow-lg border-0 rounded-lg mt-5" id="findcouster">
+                                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Find Customer</h3></div>
+                                            <div class="card-body">
+                                                <form >
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-12">
+                                                            <select class="form-select form-select-lg mb-3" oninput="findusermodul()" aria-label="Large select example" id="findmodel">
+                                                                <!-- <option selected>===== selected ==========</option> -->
+                                                                <option  value="1">Phone Number</option>
+                                                                <option  value="2">Email</option>
+                                                            </select> 
+                                                        </div>   
+                                                    </div>
+                                                </form>
+                                                <!--phone number form-->
+                                                <form  id="findnumber" onsubmit="getCustomerByNumber(event)">
+                                                    <div class="col-md-12" >
+                                                        <label for="custerphoneno" class="form-label text-uppercase fs-6 fw-semibold">Pnone number</label>
+                                                        <input type="text" class="form-control" id="custerphoneno" name="phonenumber"  required>
+                                                        <div class="valid-feedback">
+                                                            Looks good!
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt-4 mb-0">
+                                                        <button type="submit" onclick="findusermodul()" class="btn btn-primary btn-block w-100">Find</button>
+                                                    </div>
+                                                </form>
+                                                <!--email form-->
+                                                <form action="" id="findemail" onsubmit="getCustomerByEmail(event)" style="display: none;">
+                                                    <div class="col-md-12" >
+                                                        <label for="coustergmail" class="form-label text-uppercase fs-6 fw-semibold">Email</label>
+                                                        <input type="email" class="form-control" id="coustergmail" name="useremail" required>
+                                                        <div class="valid-feedback">
+                                                            Looks good!
+                                                        </div>
+                
+                                                    </div>
+                                                    <div class="mt-4 mb-0">
+                                                        <button type="submit" onclick="findusermodul()" class="btn btn-primary btn-block w-100">Find</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <!-- <div class="card-footer text-center py-3">
+                                                <a href="/staff/userregister.html" class="btn btn-success btn-block" >Add User</a>
+                                                <a href="/staff/dashboard.html" class="btn btn-danger btn-block" >Back</a>
+                                            </div> -->
+                                            <script>
+                                                function findusermodul(){
+                                                    var findmodel = document.getElementById("findmodel").value;
+                                                    if(findmodel == 1){
+                                                        document.getElementById("findnumber").style.display = "block";
+                                                        document.getElementById("findemail").style.display = "none";
+                                                    }
+                                                    else if(findmodel == 2){
+                                                        document.getElementById("findnumber").style.display = "none";
+                                                        document.getElementById("findemail").style.display = "block";
+                                                    }
+                                                    else{
+                                                        document.getElementById("findnumber").style.display = "none";
+                                                        document.getElementById("findemail").style.display = "none";
+                                                    }
+                                                        
+                                                }
+                                            </script>
+                                        </div>
+                                    </div>
+                                    <!--find user data-->
+                                    <div class="card shadow-lg border-0 rounded-lg mt-5" id="custerdatainfo" style="display: none;">
+                                        <div class="card-header p-0"><h3 class="text-center font-weight-light my-4">Custom Info</h3></div>
+                                        <div class="card-body">
+                                            <!--info-->
+                                            <div class="container text-center">
+                                                <h3 style="display: none; color: red; text-transform: uppercase;" id="unknower">** user not Find**</h3>
+                                                <div class="row g-2">
+                                                    <div class="col-6">
+                                                        <div class="p-0"><p id="cname">Name</p></div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="p-0"><p id="ExistUserName"></p></div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="p-0"><p id="cnumber">Phone Number</p></div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="p-0"><p id="ExistUserNumbee"></p></div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="p-0"><p id="cemail">Email</p></div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="p-0"><p id="ExistUserEmail" ></p></div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="p-0"><p id="cgender">Gender</p></div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="p-0"><p id="ExistUserGender"></p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer  text-center py-3">
+                                                <a href="/staff/dashboard.html" class="btn btn-danger btn-block px-2" >Back</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                        <div class="card mb-4 ">
-                            <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                            </div>
-                            <div class="card-body">
-                                <table id="datatablesSimple" class="table table-bordered" >
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Phone Number</th>
-                                            <th>Email Address</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Phone Number</th>
-                                            <th>Email Address</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>a@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>ab@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>abc@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>a@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>ab@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>abc@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>a@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>ab@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>abc@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>a@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>ab@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>abc@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>a@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>ab@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>abc@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>a@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>ab@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>abc@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>a@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>ab@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>abc@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>a@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>ab@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>abc@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>a@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>ab@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>abc@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>a@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>ab@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>E.ashok</td>
-                                            <td>8072121367</td>
-                                            <td>abc@gmail.com</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div> 
                         </div>
                     </div>
+
                 </main>
-                <footer class="p-3 bg-light mt-auto">
+                <!-- <footer class="p-3 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy;</div>
@@ -289,19 +283,32 @@
                             </div>
                         </div>
                     </div>
-                </footer>
+                </footer> -->
             </div>
         </div>
+        <!--jquri-->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <!--jqurey labery-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
+        <!-- validashon file -->
+        <script src="/js/Validation.js"></script>
+        <!--menu button-->
         <script src="/js/scripts.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="/assets/demo/chart-area-demo.js"></script>
-        <script src="/assets/demo/chart-bar-demo.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
-        <script src="/js/datatables-simple-demo.js"></script>
-        <!--api-->
+        <!--api calling-->
         <script src="/js/apiscript.js"></script>
         <!-- cdn file for aleart-->
         <script src="https://cdn.jsdelivr.net/gh/noumanqamar450/alertbox@main/version/1.0.2/alertbox.min.js"></script>
+        <!--add script in dashboard-->
+        <script src="/js/dashboard.js"></script>
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="/assets/demo/chart-area-demo.js"></script>
+        <script src="/assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="/js/datatables-simple-demo.js"></script> -->
+
+        
     </body>
 </html>
