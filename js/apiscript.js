@@ -501,6 +501,20 @@ function getCustomerByNumber(event) {
             document.getElementById("custerdatainfo").style.display="block";
             document.getElementById("findcouster").style.display="none";
 
+            document.getElementById("cnumber").style.display="none"
+            document.getElementById("cemail").style.display="none"
+            document.getElementById("cgender").style.display="none"
+
+            if( cusemail = true){
+                document.getElementById("cnumber").style.display="block"
+            }
+            if(cusemail != false){
+                document.getElementById("cemail").style.display="block"
+            }
+            if(cusgender != false){
+                document.getElementById("cgender").style.display="block"
+            }
+
             //show data
 
             document.getElementById("ExistUserName").innerHTML=cusname;
@@ -524,4 +538,5 @@ function getCustomerByNumber(event) {
         console.error('Error:', error);
     });
 }
+
 //#########################################################################################################################################################################

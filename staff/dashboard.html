@@ -10,8 +10,10 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!--loading style-->
+        <link rel="stylesheet" href="/css/loading.css">
     </head>
-    <body class="fullbg sb-nav-fixed "  >
+    <body class="fullbg sb-nav-fixed " onload="lloadding()">
         <nav class="sb-topnav navbar navbar-expand navbar-dark "  style="background-color: #eee8f6;" >
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-0 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><h5 class="m-auto" style="color: black;" ><i class="fas fa-bars" ></i></h5></button>
@@ -61,6 +63,9 @@
                 </nav>
             </div>
             <div id="layoutSidenav_content">
+                <!--loading-->
+                <div class="spinner position-absolute top-50 start-50 translate-middle" style="display: none;" id="loading"></div>    
+                <!--end-->
                 <main style="border-radius: 30px;">
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Dashboard</h1><br><br>
@@ -71,7 +76,7 @@
                                     <div class="p-3 shadow p-3 mb-5 bg-body-tertiary rounded" id="newuserregister">
                                         <div class="card-header p-0 "><h3 class="text-center font-weight-light my-4">Customer Register</h3></div>
                                         <div class="card-body">
-                                            <form id="userregister" onsubmit="customerRegister(event)"  >
+                                            <form id="userregister" onsubmit="customerRegister(event)">
                                                 <div class="row mb-3">
                                                     <div class="col-md-12">
                                                         <label for="newusername" class="form-label text-capitalize fs-6 fw-semibold">full name</label>
@@ -175,7 +180,7 @@
                                                     </div>
                                                 </form>
                                                 <!--phone number form-->
-                                                <form  id="findnumber" onsubmit="getCustomerByNumber(event)">
+                                                <form  id="findnumber" onsubmit="getCustomerByNumber(event)" >
                                                     <div class="col-md-12" >
                                                         <label for="custerphoneno" class="form-label text-uppercase fs-6 fw-semibold">Pnone number</label>
                                                         <input type="text" class="form-control" id="custerphoneno" name="phonenumber"  required>
@@ -302,6 +307,8 @@
         <script src="https://cdn.jsdelivr.net/gh/noumanqamar450/alertbox@main/version/1.0.2/alertbox.min.js"></script>
         <!--add script in dashboard-->
         <script src="/js/dashboard.js"></script>
+        <!--loadding program script-->
+        <script src="/js/wite.js"></script>
 
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="/assets/demo/chart-area-demo.js"></script>
