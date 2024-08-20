@@ -13,7 +13,7 @@
         <!--loading style-->
         <link rel="stylesheet" href="/css/loading.css">
     </head>
-    <body class="fullbg sb-nav-fixed " onload="lloadding()">
+    <body class="fullbg sb-nav-fixed ">
         <nav class="sb-topnav navbar navbar-expand navbar-dark "  style="background-color: #eee8f6;" >
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-0 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><h5 class="m-auto" style="color: black;" ><i class="fas fa-bars" ></i></h5></button>
@@ -49,10 +49,6 @@
                                 <div class="sb-nav-link-icon"> <h6 class="dashboardtext"><i class="fas fa-table"></i></h6> </div>
                                 <h6 class="dashboardtext">Tables</h6>
                             </a>
-                            <a class="nav-link" href="/staff/canara.html">
-                                <div class="sb-nav-link-icon"> <h6 class="dashboardtext"><i class="fas fa-table"></i></h6> </div>
-                                <h6 class="dashboardtext">filem</h6>
-                            </a>
                             <a class="nav-link" onclick="staffLogout(event)" >
                                 <div class="sb-nav-link-icon"> <h6 class="dashboardtext"><i class="fas fa-user fa-fw"></i></h6> </div>
                                 <h6 class="dashboardtext">Logout</h6>
@@ -64,6 +60,7 @@
             </div>
             <div id="layoutSidenav_content">
                 <!--loading-->
+
                 <div class="spinner position-absolute top-50 start-50 translate-middle" style="display: none;" id="loading"></div>    
                 <!--end-->
                 <main style="border-radius: 30px;">
