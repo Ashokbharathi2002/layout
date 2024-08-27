@@ -183,6 +183,22 @@ $(document).ready(function(){
     });
 });
 
+/* id */
+$(document).ready(function(){
+    $("#findid").validate({
+        rules : {
+            userid :{
+                required: true,
+            }
+        },
+        messages:{
+            userid:{
+                required: "Please enter your id",
+            }
+        }
+    });
+});
+
 // admin login validashon
 $(document).ready(function(){
     $("#stafflogin").validate({
