@@ -542,6 +542,7 @@ function getCustomerByNumber(event) {
 //admin
 //get staff by email
 function getstaffByEmail(event) {
+
     event.preventDefault();
     var staffEmail = document.getElementById("staffemailid").value;
 
@@ -613,10 +614,152 @@ function getstaffByEmail(event) {
     });
 }
 
+//#########################################################################################################################################################################
+//ger customer by phone number
+function getstaffByNumber(event) {
+    event.preventDefault();
+    var staffPhone = document.getElementById("staffphoneno").value;
 
+    fetch(host+appName+'getstaffbyphone/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer'+localStorage.getItem('token')
+        },
+        body: JSON.stringify({
+            phone : staffPhone
+            // phone : "8903920608"            
 
+        }),
+        credentials: 'include', // Include credentials (cookies)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Message:', data.message);
+        console.log('Status:', data.status);
+        console.log('Status:', data.data);
 
+        if (data.data && data.data.length > 0) {
+            console.log(data.data)
+            let customer = data.data[0];
+            console.log(customer)
+            console.log(customer.name); // Output: vijay
+            console.log(customer.phone); 
+            console.log(customer.email); 
+            console.log(customer.gender); 
 
+            
+            alertbox.render({
+                alertIcon: 'success',
+                title: 'Thank You!',
+                message: ' Successful',
+                btnTitle: 'Ok',
+                border:true
+            });
+
+            let staffname = customer.name
+            let designation = customer.designation
+            let staffnumber = customer.phone
+            let staffemail = customer.email
+            let staffgender = customer.gender
+
+            //show data
+
+            document.getElementById("staffname").innerHTML=staffname;
+            document.getElementById("designation").innerHTML=designation;
+            document.getElementById("staffnumbee").innerHTML=staffnumber;
+            document.getElementById("staffemail").innerHTML=staffemail;
+            document.getElementById("satffgender").innerHTML=staffgender;
+
+        } 
+        else {
+            console.log('No customer data found.');
+            alertbox.render({
+                alertIcon: 'warning',
+                title: 'Thank You!',
+                message: data.message,
+                btnTitle: 'Ok',
+                border:true
+            });   
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+//#########################################################################################################################################################################
+//ger customer by phone ID
+function getstaffByid(event) {
+    event.preventDefault();
+    var staffid = document.getElementById("staffid").value;
+
+    fetch(host+appName+'getcustomerbyid/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer'+localStorage.getItem('token')
+        },
+        body: JSON.stringify({
+            id : staffid
+
+        }),
+        credentials: 'include', // Include credentials (cookies)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Message:', data.message);
+        console.log('Status:', data.status);
+        console.log('Status:', data.data);
+
+        if (data.data && data.data.length > 0) {
+            console.log(data.data)
+            let customer = data.data[0];
+            console.log(customer)
+            console.log(customer.name); // Output: vijay
+            console.log(customer.phone); 
+            console.log(customer.email); 
+            console.log(customer.gender); 
+
+            
+            alertbox.render({
+                alertIcon: 'success',
+                title: 'Thank You!',
+                message: ' Successful',
+                btnTitle: 'Ok',
+                border:true
+            });
+
+            let staffname = customer.name
+            let designation = customer.designation
+            let staffnumber = customer.phone
+            let staffemail = customer.email
+            let staffgender = customer.gender
+
+            //show data
+
+            document.getElementById("staffname").innerHTML=staffname;
+            document.getElementById("designation").innerHTML=designation;
+            document.getElementById("staffnumbee").innerHTML=staffnumber;
+            document.getElementById("staffemail").innerHTML=staffemail;
+            document.getElementById("satffgender").innerHTML=staffgender;
+
+        } 
+        else {
+            console.log('No customer data found.');
+            alertbox.render({
+                alertIcon: 'warning',
+                title: 'Thank You!',
+                message: data.message,
+                btnTitle: 'Ok',
+                border:true
+            });   
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
 
 
 

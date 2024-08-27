@@ -275,15 +275,13 @@
                                                         </div>
                                                     </form>
                                                     <!--phone number form-->
-                                                    <form action="" id="findnumber">
+                                                    <form onsubmit="getstaffByNumber(event)" id="findnumber">
                                                         <div class="col-md-12" >
-
-                                                            <label for="validationCustom02" class="form-label text-uppercase fs-6 fw-semibold">Pnone number</label>
-                                                            <input type="text" class="form-control" id="validationCustom02" name="phonenumber"  required>
+                                                            <label for="staffphoneno" class="form-label text-uppercase fs-6 fw-semibold">Pnone number</label>
+                                                            <input type="text" class="form-control" id="staffphoneno" name="phonenumber"  required>
                                                             <div class="valid-feedback">
                                                                 Looks good!
                                                             </div>
-
                                                         </div>
                                                         <div class="mt-4 mb-0">
                                                             <button type="submit" onclick="findusermodul()" class="btn btn-primary btn-block w-100">Find</button>
@@ -304,10 +302,10 @@
                                                         </div>
                                                     </form>
                                                     <!--ID form-->
-                                                    <form action="" id="findid" style="display: none;">
+                                                    <form onsubmit="getstaffByid(event)" id="findid" style="display: none;">
                                                         <div class="col-md-12" >
-                                                            <label for="validationCustom03" class="form-label text-uppercase fs-6 fw-semibold">ID</label>
-                                                            <input type="number" class="form-control" id="validationCustom03" name="userid" required>
+                                                            <label for="staffid" class="form-label text-uppercase fs-6 fw-semibold">ID</label>
+                                                            <input type="number" class="form-control" id="staffid" name="userid" required>
                                                             <div class="valid-feedback">
                                                                 Looks good!
                                                             </div>
