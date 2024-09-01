@@ -48,6 +48,10 @@
                                 <div class="sb-nav-link-icon"> <h6 class="dashboardtext"><i class="fas fa-user fa-fw"></i></h6></div>
                                 <h6 class="dashboardtext">Logout</h6>
                             </a>
+                            <a class="nav-link" href="/staff/dashboard.html">
+                                <div class="sb-nav-link-icon"> <h6 class="dashboardtext"><i class="fas fa-user fa-fw"></i></h6></div>
+                                <h6 class="dashboardtext">staff dashboard</h6>
+                            </a>
                         </div>
                     </div>
                 </nav>
@@ -58,7 +62,7 @@
                         <h1 class="mt-4">Admin Dashboard</h1>
                         <!--controll buttons-->
                         <div class="container text-center">
-                            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                            <div class="row row-cols-2 row-cols-lg-6 g-2 g-lg-1">
                                 <div class="col">
                                     <div class="">
                                         <!--add button-->
@@ -127,9 +131,32 @@
                                         </button>
                                     </div>
                                 </div>
+                                <div class="col">
+                                    <div class="">
+                                        <!-- add admin -->
+                                        <button type="button" class="button" onclick="addadmin()">
+                                            <span class="button__text">Add Admin</span>
+                                            <span class="button__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                                                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                                                    <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <!-- contenr -->
+                        <!-- contenr --> <br><br>
+                        <div id="adminguid">
+                            <div class="p-3 shadow p-3 mb-5 bg-body-tertiary rounded" id="newuserregister">
+                                <div class="card-header p-0 "><h3 class="text-center font-weight-light my-4">admin guid</h3></div>
+                                <div class="card-body">
+                                    Admin Gide...
+                                    <ul>add a staff</ul>
+                                </div>
+                            </div>
+                        </div>
                         <!-- staff register -->
                         <div id="staff_register">
                             <div class="container overflow-hidden ">
@@ -138,10 +165,10 @@
                                         <div class="p-3">
                                             <!--form contend layout-->
                                             <div class="p-3 shadow p-3 mb-5 bg-body-tertiary rounded" id="newuserregister">
-                                                <div class="card-header p-0 "><h3 class="text-center font-weight-light my-4">Staff Register</h3></div>
+                                                <div class="card-header p-0 "><h3 class="text-center font-weight-light my-4"> Add Staff</h3></div>
                                                 <div class="card-body">
                                                     <!--form content-->
-                                                    <form id="Register" style="min-width: 250px;" >
+                                                    <form id="Register">
                                                         <div class="row mb-3">
                                                             <div class="col-md-6">
                                                                 <label for="validationCustom01" class="form-label text-capitalize fs-6 fw-semibold">full name</label>
@@ -188,6 +215,10 @@
                                                                     <input type="text" class="form-control" id="staffpassword" name="staffpass" required >
                                                                     <button class="btn btn-outline-secondary" type="button" onclick="generatePass()" id="button-addon2">genarate</button>
                                                                 </div>
+                                                            </div>
+                                                            <div class="col-md-12 ">
+                                                                <label for="staffcpassword" class="form-label">Confirm password</label>
+                                                                 <input type="password" class="form-control" id="staffcpassword" name="conformpassword">
                                                             </div>
                                                             
                                                         </div>
@@ -249,7 +280,124 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
+                        <!--add admin-->
+                        <div id="addadmin">
+                            <div class="container overflow-hidden ">
+                                <div class="row gx-5">
+                                    <div class="col">
+                                        <div class="p-3">
+                                            <!--form contend layout-->
+                                            <div class="p-3 shadow p-3 mb-5 bg-body-tertiary rounded" id="newuserregister">
+                                                <div class="card-header p-0 "><h3 class="text-center font-weight-light my-4"> Add admin</h3></div>
+                                                <div class="card-body">
+                                                    <!--form content-->
+                                                    <form id="Register">
+                                                        <div class="row mb-3">
+                                                            <div class="col-md-6">
+                                                                <label for="validationCustom01" class="form-label text-capitalize fs-6 fw-semibold">full name</label>
+                                                                <input type="text" class="form-control" id="validationCustom01" name="fullname" >
+                                                                <div class="valide-feedback">
+                                                                   
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <label for="validationCustom02" class="form-label text-capitalize fs-6 fw-semibold">Pnone number</label>
+                                                                <input type="number" class="form-control" id="validationCustom02" name="phoneno" >
+                                                                <div class="valid-feedback">
+                                                                    Looks good!
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 p-3">
+                                                                <label for="validationCustom03" class="form-label text-capitalize fs-6 fw-semibold">Email</label>
+                                                                <input type="email" class="form-control" id="validationCustom03" name="useremail" required >
+                                                                <div class="valid-feedback">
+                                                                    Looks good!
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <label for="validationCustom04" class="form-label text-capitalize fs-6 fw-semibold">designation</label>
+                                                                <input type="text" class="form-control" id="validationCustom04" value="Admin" name="designation" >
+                                                                <div class="valid-feedback">
+                                                                    Looks good!
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 p-3">
+                                                                <label for="validationCustom05" class="form-label text-capitalize fs-6 fw-semibold">Gender</label>
+                                                                <select class="form-select" id="validationCustom05" name="Gender" >
+                                                                    <option selected disabled value="">Choose...</option>
+                                                                    <option value="Male">Male</option>
+                                                                    <option value="Female">Female</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">
+                                                                    Please select a valid state.
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ">
+                                                                <label for="staffcpassword" class="form-label">password</label>
+                                                                 <input type="password" class="form-control" id="staffcpassword" name="conformpassword">
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="mt-4 mb-0 text-center justify-content-center">
+                                                            <button type="submit" class="btn btn-primary btn-block w-100"> Register 🧑‍💻 </button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="p-3">
+                                            <!--show contend-->
+                                            <div class="card shadow-lg border-0 rounded-lg mt-5" id="Newcustomregisterr">
+                                                <div class="card-header p-0"><h3 class="text-center font-weight-light my-4">Admin Info</h3></div>
+                                                <div class="card-body">
+                                                    <!--info-->
+                                                    <div class="container text-center">
+                                                        <div class="row g-2">
+                                                            <div class="col-6">
+                                                                <div class="p-0"><p>Name</p></div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="p-0"><p id="username"></p></div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="p-0"><p>designation</p></div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="p-0"><p id="designation"></p></div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="p-0"><p>Phone Number</p></div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="p-0"><p id="usernumbee"></p></div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="p-0"><p >Email</p></div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="p-0"><p id="useremail" ></p></div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="p-0"><p>Gender</p></div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="p-0"><p id="usergender"></p></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="card-footer  text-center py-3">
+                                                        <a href="/staff/dashboard.html" class="btn btn-danger btn-block px-2" >Back</a>
+                                                    </div> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- find staff -->
                         <div id="find_staff">
                             <div class="container overflow-hidden ">
@@ -440,21 +588,43 @@
                                 <div class="card-header p-0"><h3 class="text-center font-weight-light my-4">Staff Table</h3></div>
                                 <div class="card-body">
                                     <!--staff table-->
-                                    <table class="table text-center">
-                                        <thead>
-                                            <th>Name</th>
-                                            <th>Designation</th>
-                                            <th>Email</th>
-                                            <th>Phone Number</th>
-                                            <th>Edite</th>
-                                        </thead>
-                                        <tbody>
-                                            <td>ashok</td>
-                                            <td>staff</td>
-                                            <td>ashok2022@gmail.com</td>
-                                            <td>9807212136</td>
-                                        </tbody>
-                                    </table>
+                                    <div class="table-responsive">
+                                        <table class="table text-center table-striped">
+                                            <thead>
+                                                <th>Name</th>
+                                                <th>Designation</th>
+                                                <th>Email</th>
+                                                <th>Phone Number</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>ashok</td>
+                                                    <td>staff</td>
+                                                    <td>ashok2022@gmail.com</td>
+                                                    <td>9807212136</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ashok</td>
+                                                    <td>staff</td>
+                                                    <td>ashok2022@gmail.com</td>
+                                                    <td>9807212136</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ashok</td>
+                                                    <td>staff</td>
+                                                    <td>ashok2022@gmail.com</td>
+                                                    <td>9807212136</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ashok</td>
+                                                    <td>staff</td>
+                                                    <td>ashok2022@gmail.com</td>
+                                                    <td>9807212136</td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -464,19 +634,43 @@
                                 <div class="card-header p-0"><h3 class="text-center font-weight-light my-4">Clind Table</h3></div>
                                 <div class="card-body">
                                     <!--staff table-->
-                                    <table class="table text-center">
-                                        <thead>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Phone Number</th>
-                                            <th>Edite</th>
-                                        </thead>
-                                        <tbody>
-                                            <td>ashok</td>
-                                            <td>ashok2022@gmail.com</td>
-                                            <td>9807212136</td>
-                                        </tbody>
-                                    </table>
+                                    <div class="table-responsive">
+                                        <table class="table text-center table-striped">
+                                            <thead>
+                                                <th>Name</th>
+                                                <th>Designation</th>
+                                                <th>Email</th>
+                                                <th>Phone Number</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>ashok</td>
+                                                    <td>staff</td>
+                                                    <td>ashok2022@gmail.com</td>
+                                                    <td>9807212136</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ashok</td>
+                                                    <td>staff</td>
+                                                    <td>ashok2022@gmail.com</td>
+                                                    <td>9807212136</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ashok</td>
+                                                    <td>staff</td>
+                                                    <td>ashok2022@gmail.com</td>
+                                                    <td>9807212136</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ashok</td>
+                                                    <td>staff</td>
+                                                    <td>ashok2022@gmail.com</td>
+                                                    <td>9807212136</td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>    

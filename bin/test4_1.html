@@ -1,0 +1,204 @@
+<div class="row gx-5">
+                                
+    <!--register-->
+    <div class="col">
+        <div class="p-3 shadow p-3 mb-5 bg-body-tertiary rounded" id="newuserregister">
+            <div class="card-header p-0 "><h3 class="text-center font-weight-light my-4">Customer Register</h3></div>
+            <div class="card-body">
+                <form id="userregister" onsubmit="customerRegister(event)">
+                    <div class="row mb-3">
+                        <div class="col-md-12">
+                            <label for="newusername" class="form-label text-capitalize fs-6 fw-semibold">full name</label>
+                            <input type="text" class="form-control p-1" id="newusername" name="fullname"  >
+                            <div class="valide-feedback">
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-12 ">
+                            <label for="newuserphone" class="form-label text-capitalize fs-6 fw-semibold">Pnone number</label>
+                            <input type="number" class="form-control p-1" id="newuserphone" name="nuphoenumber"  >
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-12 ">
+                            <label for="newuseremail" class="form-label text-capitalize fs-6 fw-semibold">Email</label>
+                            <input type="email" class="form-control p-1" id="newuseremail" name="useremail" >
+                            <div class="valid-feedback">
+                            Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-12 ">
+                            <label for="newusergender" class="form-label text-capitalize fs-6 fw-semibold">Gender</label>
+                            <select class="form-select p-1" id="newusergender" name="Gender" >
+                                <option selected disabled value="">Choose...</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                looks good
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="mt-4 mb-0">
+                        <button type="submit" onclick="" class="btn btn-primary btn-block w-100">submit</button>
+                    </div>
+                </form><br>
+                <!-- <div class="card-footer  text-center py-3">
+                    <a href="/staff/olduser.html" class="btn btn-success btn-block px-2" >Find User</a>
+                    <a href="/staff/userregister.html" class="btn btn-danger btn-block px-2" >Back</a>
+                </div> -->
+            </div>
+        </div>
+        <!--show the user data-->
+        <div class="card shadow-lg border-0 rounded-lg mt-5" id="Newcustomregisterr" style="display: none;">
+            <div class="card-header p-0"><h3 class="text-center font-weight-light my-4">Custom Info</h3></div>
+            <div class="card-body">
+                <!--info-->
+                <div class="container text-center">
+                    <h3 style="display: none; color: red; text-transform: uppercase;" id="unknower">**unknower user**</h3>
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <div class="p-0"><p>Name</p></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-0"><p id="username"></p></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-0"><p>Phone Number</p></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-0"><p id="usernumbee"></p></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-0"><p >Email</p></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-0"><p id="useremail" ></p></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-0"><p>Gender</p></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-0"><p id="usergender"></p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer  text-center py-3">
+                    <a href="/staff/dashboard.html" class="btn btn-danger btn-block px-2" >Back</a>
+                    <a href="/staff/canara.html" class="btn btn-success btn-block px-2" >conform</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--find user-->
+    <div class="col">
+        <div class="p-3">
+            <div class="card shadow-lg border-0 rounded-lg mt-5" id="findcouster">
+                <div class="card-header"><h3 class="text-center font-weight-light my-4">Find Customer</h3></div>
+                <div class="card-body">
+                    <form >
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <select class="form-select form-select-lg mb-3" oninput="findusermodul()" aria-label="Large select example" id="findmodel">
+                                    <!-- <option selected>===== selected ==========</option> -->
+                                    <option  value="1">Phone Number</option>
+                                    <option  value="2">Email</option>
+                                </select> 
+                            </div>   
+                        </div>
+                    </form>
+                    <!--phone number form-->
+                    <form  id="findnumber" onsubmit="getCustomerByNumber(event)" >
+                        <div class="col-md-12" >
+                            <label for="custerphoneno" class="form-label text-uppercase fs-6 fw-semibold">Pnone number</label>
+                            <input type="text" class="form-control" id="custerphoneno" name="phonenumber"  required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="mt-4 mb-0">
+                            <button type="submit" onclick="findusermodul()" class="btn btn-primary btn-block w-100">Find</button>
+                        </div>
+                    </form>
+                    <!--email form-->
+                    <form action="" id="findemail" onsubmit="getCustomerByEmail(event)" style="display: none;">
+                        <div class="col-md-12" >
+                            <label for="coustergmail" class="form-label text-uppercase fs-6 fw-semibold">Email</label>
+                            <input type="email" class="form-control" id="coustergmail" name="useremail" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+
+                        </div>
+                        <div class="mt-4 mb-0">
+                            <button type="submit" onclick="findusermodul()" class="btn btn-primary btn-block w-100">Find</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- <div class="card-footer text-center py-3">
+                    <a href="/staff/userregister.html" class="btn btn-success btn-block" >Add User</a>
+                    <a href="/staff/dashboard.html" class="btn btn-danger btn-block" >Back</a>
+                </div> -->
+                <script>
+                    function findusermodul(){
+                        var findmodel = document.getElementById("findmodel").value;
+                        if(findmodel == 1){
+                            document.getElementById("findnumber").style.display = "block";
+                            document.getElementById("findemail").style.display = "none";
+                        }
+                        else if(findmodel == 2){
+                            document.getElementById("findnumber").style.display = "none";
+                            document.getElementById("findemail").style.display = "block";
+                        }
+                        else{
+                            document.getElementById("findnumber").style.display = "none";
+                            document.getElementById("findemail").style.display = "none";
+                        }
+                            
+                    }
+                </script>
+            </div>
+        </div>
+        <!--find user data-->
+        <div class="card shadow-lg border-0 rounded-lg mt-5" id="custerdatainfo" style="display: none;">
+            <div class="card-header p-0"><h3 class="text-center font-weight-light my-4">Custom Info</h3></div>
+            <div class="card-body">
+                <!--info-->
+                <div class="container text-center">
+                    <h3 style="display: none; color: red; text-transform: uppercase;" id="unknower">** user not Find**</h3>
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <div class="p-0"><p id="cname">Name</p></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-0"><p id="ExistUserName"></p></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-0"><p id="cnumber">Phone Number</p></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-0"><p id="ExistUserNumbee"></p></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-0"><p id="cemail">Email</p></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-0"><p id="ExistUserEmail" ></p></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-0"><p id="cgender">Gender</p></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-0"><p id="ExistUserGender"></p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer  text-center py-3">
+                    <a href="/staff/dashboard.html" class="btn btn-danger btn-block px-2" >Back</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

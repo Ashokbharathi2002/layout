@@ -578,7 +578,7 @@ function getstaffByEmail(event) {
             alertbox.render({
                 alertIcon: 'success',
                 title: 'Thank You!',
-                message: 'Logging Successful',
+                message: ' Successful',
                 btnTitle: 'Ok',
                 border:true
             });

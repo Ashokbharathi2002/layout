@@ -1,9 +1,11 @@
 //button funchon
+document.getElementById("adminguid").style.display="block";
 document.getElementById("staff_register").style.display="none";
 document.getElementById("find_staff").style.display="none";
 document.getElementById("staff_requst").style.display="none";
 document.getElementById("staff_list").style.display="none";
 document.getElementById("clind_list").style.display="none";
+document.getElementById("addadmin").style.display="none";
 
 function staffregister(){
     document.getElementById("staff_register").style.display="block";
@@ -11,6 +13,8 @@ function staffregister(){
     document.getElementById("staff_requst").style.display="none";
     document.getElementById("staff_list").style.display="none";
     document.getElementById("clind_list").style.display="none";
+    document.getElementById("adminguid").style.display="none";
+    document.getElementById("addadmin").style.display="none";
 }
 function findstaf(){
     document.getElementById("staff_register").style.display="none";
@@ -18,6 +22,8 @@ function findstaf(){
     document.getElementById("staff_requst").style.display="none";
     document.getElementById("staff_list").style.display="none";
     document.getElementById("clind_list").style.display="none";
+    document.getElementById("adminguid").style.display="none";
+    document.getElementById("addadmin").style.display="none";
 }
 function staffrequst(){
     document.getElementById("staff_register").style.display="none";
@@ -25,6 +31,8 @@ function staffrequst(){
     document.getElementById("staff_requst").style.display="block";
     document.getElementById("staff_list").style.display="none";
     document.getElementById("clind_list").style.display="none";
+    document.getElementById("adminguid").style.display="none";
+    document.getElementById("addadmin").style.display="none";
 }
 function stafflist(){
     document.getElementById("staff_register").style.display="none";
@@ -32,6 +40,8 @@ function stafflist(){
     document.getElementById("staff_requst").style.display="none";
     document.getElementById("staff_list").style.display="block";
     document.getElementById("clind_list").style.display="none";
+    document.getElementById("adminguid").style.display="none";
+    document.getElementById("addadmin").style.display="none";
 }
 function clindlist(){
     document.getElementById("staff_register").style.display="none";
@@ -39,6 +49,17 @@ function clindlist(){
     document.getElementById("staff_requst").style.display="none";
     document.getElementById("staff_list").style.display="none";
     document.getElementById("clind_list").style.display="block";
+    document.getElementById("adminguid").style.display="none";
+    document.getElementById("addadmin").style.display="none";
+}
+function addadmin(){
+    document.getElementById("staff_register").style.display="none";
+    document.getElementById("find_staff").style.display="none";
+    document.getElementById("staff_requst").style.display="none";
+    document.getElementById("staff_list").style.display="none";
+    document.getElementById("clind_list").style.display="none";
+    document.getElementById("adminguid").style.display="none";
+    document.getElementById("addadmin").style.display="block";
 }
 
 /* Function to generate password */
