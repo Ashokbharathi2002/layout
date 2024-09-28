@@ -252,7 +252,7 @@ function customerRegister(event){
             alertbox.render({
                 alertIcon: 'success',
                 title: 'Thank You!',
-                message: 'Logging Successful',
+                message: 'Customer register successfully',
                 btnTitle: 'Ok',
                 border:true
             });
@@ -761,51 +761,73 @@ function getstaffByid(event) {
     });
 }
 
-
-
-
 //#########################################################################################################################################################################
 // get all staff daata
 
 function getStaffData(event){
     event.preventDefault();
     fetch(host+appName+'getallstaff/')
-    .then(response =>console.log(response.json()))
+    .then(response =>response.json())
     .then(data => createList(data));
-    createList(data)
-
-    function createList(data) {
-        // your code here
-        var table = "<table border=1>";
-        // add a row for name and marks
-        table += `<tr>
-                    <th>Name</th>
-                    <th colspan="4">Marks</th>
-                </tr>`;
-        // now add another row to show subject
-        table += `<tr>
-                    <th>Name</th>
-                    <th>Designation</th>
-                    <th>Email</th>
-                    <th>Phone Number</th>
-                    <th>Edite</th>
-                </tr>`;
-        // now loop through students
-        // show their name and marks
-        var tr = "";
-        for(let i = 0; i < data.result.length; i++) {
-        tr += "<tr>";
-        tr += `<td>${data.result[i].name}</td>`;
-        for (var key in data.result[i].marks) {
-            tr += `<td>${data.result[i].marks[key]}</td>`;
-        }
-        tr += "</tr>"
-        }
-        table += tr + "</table>";
-
-        // append table to body
-        document.body.innerHTML += table;
-        
-    }
 }
 
+function createList(data) {
+    console.log(data.data)
+    let staffs = data.data
+    var table = "<table border=5 class= table table-sm table-responsive>";
+    
+    // now add another row to show subject
+    table += `<tr>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+            </tr>`;
+    // now loop through staffs
+    // show their name and marks
+    for(let i = 0; i < staffs.length; i++) {
+        table += "<tr>";
+        table += `<td>${staffs[i].name}</td>`;
+        table += `<td>${staffs[i].designation}</td>`;
+        table += `<td>${staffs[i].email}</td>`;
+        table += `<td>${staffs[i].phone}</td>`;
+        table += "</tr>";
+    }
+    table += "</table>";
+    // append table to body
+    document.getElementById("staffList").innerHTML += table;
+}
+//#########################################################################################################################################################################
+//get all costermor
+
+function getclintData(event){
+    event.preventDefault();
+    fetch(host+appName+'getallclind/')
+    .then(response =>response.json())
+    .then(data => createList(data));
+}
+
+function clintList(data) {
+    console.log(data.data)
+    let staffs = data.data
+    var table = "<table border=5 class= table table-sm table-responsive>";
+    
+    // now add another row to show subject
+    table += `<tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+            </tr>`;
+    // now loop through staffs
+    // show their name and marks
+    for(let i = 0; i < staffs.length; i++) {
+        table += "<tr>";
+        table += `<td>${staffs[i].name}</td>`;
+        table += `<td>${staffs[i].email}</td>`;
+        table += `<td>${staffs[i].phone}</td>`;
+        table += "</tr>";
+    }
+    table += "</table>";
+    // append table to body
+    document.getElementById("staffList").innerHTML += table;
+}
